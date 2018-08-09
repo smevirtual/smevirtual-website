@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#0c3352">
+  <meta name="description" content="Official homepage for the SME Virtual Network.">
+  <meta name="keywords" content="engineering, manufacturing, sme, smevirtual, education">
+  <meta name="robots" content="index,follow">
+  <meta name="googlebot" content="index,follow">
+  <meta name="google" content="nositelinkssearchbox">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <title>SME Virtual Network | Homepage</title>
+  <% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
+    <script src="<%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
+  <% } %>
+</head>
+<body>
+  <!--[if IE]>
+    <div class="container-fluid py-2 smev-outdated-browser-banner">
+      <p class="my-0">This site works best when you are using a modern web browser. Please consider <a href="http://outdatedbrowser.com/" target="_blank">upgrading your browser</a> to improve your experience.</p>
+    </div>
+  <![endif]-->
+
+  <div class="container-fluid py-2 smev-outdated-browser-banner" style="display: none">
+    <p class="my-0">This site works best when you are using a modern web browser. Please consider <a href="http://outdatedbrowser.com/" target="_blank">upgrading your browser</a> to improve your experience.</p>
+  </div>
+
+  <!-- TODO -->
+</body>
+</html>
