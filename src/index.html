@@ -1,15 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" itemscope itemtype="http://schema.org/WebSite">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="theme-color" content="#0c3352">
+  <!-- Force IE 8/9/10 to use its latest rendering engine -->
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="theme-color" content="#112233">
   <meta name="description" content="Official homepage for the SME Virtual Network.">
   <meta name="keywords" content="engineering, manufacturing, sme, smevirtual, education">
   <meta name="robots" content="index,follow">
   <meta name="googlebot" content="index,follow">
   <meta name="google" content="nositelinkssearchbox">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- For Facebook, Reddit and some other social networks -->
+  <!-- Thumbnail size is 500px x 500px -->
+  <meta name="thumbnail"           content="https://smevirtual.com/thumbnail.png" />
+  <meta property="og:type"         content="website" />
+  <meta property="og:title"        content="SME Virtual Network" />
+  <meta property="og:description"  content="We work to energize, mobilize and engage the global engineering and manufacturing community via the Internet." />
+  <!-- Facebook Card image size is specified in `og:image:width` and `og:image:height` -->
+  <meta property="og:image"        content="https://smevirtual.com/og_card_thumbnail.png" />
+  <meta property="og:image:width"  content="1200">
+  <meta property="og:image:height" content="1200">
+
+  <!-- For Twitter -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:site"        content="@smevirtual" />
+  <meta name="twitter:creator"     content="@smevirtual" />
+
+  <!-- For Google+ (Schema.org) -->
+  <meta itemprop="name" content="SME Virtual Network">
+  <meta itemprop="description" content="We work to energize, mobilize and engage the global engineering and manufacturing community via the Internet.">
+  <!-- Image size is 1920px x 1080px -->
+  <meta itemprop="image" content="https://smevirtual.com/rich_snippet.png">
+
   <title>SME Virtual Network | Homepage</title>
   <% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
     <script src="<%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
