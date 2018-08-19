@@ -46,7 +46,9 @@ gulp.task("bundle", callback => {
  * COPY TASK
  * -----------------------------------------------------------------------------
  */
-gulp.task("copy", () => gulp.src(["src/images/**/*", "src/*.txt", "src/404.html"]).pipe(gulp.dest("dist")));
+gulp.task("copy", () =>
+  gulp.src(["src/images/**/*", "src/*.txt", "src/*.json", "src/404.html"]).pipe(gulp.dest("dist"))
+);
 
 /**
  * CLEAN TASK

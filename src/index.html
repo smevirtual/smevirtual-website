@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" itemscope itemtype="http://schema.org/WebSite">
 <head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111698249-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-111698249-2');
+  </script>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- Force IE 8/9/10 to use its latest rendering engine -->
@@ -35,21 +44,362 @@
   <meta itemprop="image" content="https://smevirtual.com/rich_snippet.png">
 
   <title>SME Virtual Network | Homepage</title>
+
   <% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
     <script src="<%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
   <% } %>
+
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.js" integrity="sha256-icjghcPaibMf1jv4gQIGi5MeWNHem2SispcorCiCfSg=" crossorigin="anonymous"></script>
+
+  <script type="text/javascript">
+    // Load Particles.js into page header.
+    particlesJS.load('particle-field', 'particlesjs-config.json', function() {
+      console.log('Particles.js configuration loaded.');
+    });
+  </script>
 </head>
 <body>
   <!--[if IE]>
-    <div class="container-fluid py-2 smev-outdated-browser-banner">
+    <div class="container-fluid py-2 smev-outdated-banner">
       <p class="my-0">This site works best when you are using a modern web browser. Please consider <a href="http://outdatedbrowser.com/" target="_blank">upgrading your browser</a> to improve your experience.</p>
     </div>
   <![endif]-->
 
-  <div class="container-fluid py-2 smev-outdated-browser-banner" style="display: none">
+  <div class="container-fluid py-2 smev-outdated-banner" style="display: none">
     <p class="my-0">This site works best when you are using a modern web browser. Please consider <a href="http://outdatedbrowser.com/" target="_blank">upgrading your browser</a> to improve your experience.</p>
   </div>
 
-  <!-- TODO -->
+  <div id="header" class="smev-header">
+    <div class="smev-header__brand">
+      <div id="header-logo" class="smev-header__logo">
+        <img src="/smevirtual_logo_white.svg">
+      </div>
+    </div>
+    <div class="smev-header__menu">
+      <a class="btn btn-link" href="https://goo.gl/forms/tLNr9Ln6tMzzgV4i2">Feedback</a>
+      <a class="btn btn-primary" href="https://www.meetup.com/smevirtual/">Events</a>
+    </div>
+  </div>
+
+  <div class="smev-hero">
+    <div id="particle-field"></div>
+  </div>
+
+  <div class="container">
+
+    <div class="row mt-4">
+      <div class="col-md-6">
+        <div class="card flex-md-row mb-3 h-md-250">
+          <div class="card-body d-flex flex-column align-items-start">
+            <h3 class="mb-0">
+              <span class="text-dark">Mission</span>
+            </h3>
+            <p class="card-text mb-auto py-2">
+              Our mission is to energize, mobilize and engage the global engineering and manufacturing community by bringing together industry, researchers, professionals and students to solve shared problems and relentlessly work to shrink the <a href="https://www2.deloitte.com/us/en/pages/manufacturing/articles/boiling-point-the-skills-gap-in-us-manufacturing.html">skills gap</a>.
+            </p>
+            <p class="card-text mb-auto py-2">
+              The SME Virtual Network is completely volunteer-powered.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card flex-md-row mb-3 h-md-250">
+          <div class="card-body d-flex flex-column align-items-start">
+            <h3 class="mb-0">
+              <span class="text-dark">Engagement Platforms</span>
+            </h3>
+            <p class="card-text mb-auto py-2">
+              We embrace the accessibility and connectivity of the Internet to launch immersive virtual events, unique learning experiences and always-on conversations.
+            </p>
+            <p class="card-text mb-auto py-2">
+              Our contributors have the option to use any or all of these platforms in unique ways to provide engagement opportunities to students and professionals.
+            </p>
+
+            <div class="d-flex" class="smev-card">
+              <div class="pr-2 py-2 flex-shrink-1">
+                <a href="https://www.youtube.com/smevirtual">
+                  <img class="sme-card-icon" src="/stream_icon.svg" alt="Virtual Events">
+                </a>
+              </div>
+              <div class="p-2 w-100 my-auto">
+                <h5 class="mb-3">Virtual Events</h5>
+                <p>Live-streamed and pre-recorded webinars, workshops and walkthroughs.</p>
+              </div>
+            </div>
+
+            <div class="d-flex" class="smev-card">
+              <div class="pr-2 py-2 flex-shrink-1">
+                <a href="https://discuss.smevirtual.com/">
+                  <img class="sme-card-icon" src="/forum_icon.svg" alt="Industry 4.0 Forum">
+                </a>
+              </div>
+              <div class="p-2 w-100 my-auto">
+                <h5 class="mb-3">Industry 4.0 Discussion</h5>
+                <p><strong>BETA</strong> Advanced topics, insightful posts, Ask-Me-Anythings and Q&As - discuss it all here.</p>
+              </div>
+            </div>
+
+            <div class="d-flex" class="smev-card">
+              <div class="pr-2 py-2 flex-shrink-1">
+                <a href="https://discord.gg/ufADa72">
+                  <img class="sme-card-icon" src="/chat_icon.svg" alt="Instant Chat">
+                </a>
+              </div>
+              <div class="p-2 w-100 my-auto">
+                <h5 class="mb-3">Instant Chat</h5>
+                <p><strong>BETA</strong> Realtime, always-on interaction with the community.</p>
+              </div>
+            </div>
+
+            <div class="d-flex" class="smev-card">
+              <div class="pr-2 py-2 flex-shrink-1">
+                <a href="https://github.com/smevirtual/">
+                  <img class="sme-card-icon" src="/code_icon.svg" alt="Open Source Development">
+                </a>
+              </div>
+              <div class="p-2 w-100 my-auto">
+                <h5 class="mb-3">Open Source Work</h5>
+                <p>We love open-source. Take a look at our current software/hardware projects. You can get involved too!</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card flex-md-row mb-3 h-md-250">
+          <div class="card-body d-flex flex-column align-items-start">
+            <h3 class="mb-0">
+              <span class="text-dark">Our Principles</span>
+            </h3>
+
+            <div class="d-flex">
+              <div class="pr-2 py-2 flex-shrink-1 my-auto">
+                <h4>1</h4>
+              </div>
+              <div class="p-2 w-100">
+                <span>We are an <a href="https://github.com/smevirtual/community-guidelines">open and welcoming community</a> as we believe that diversity and inclusivity makes the industry better.</span>
+              </div>
+            </div>
+
+            <div class="d-flex">
+              <div class="pr-2 py-2 flex-shrink-1 my-auto">
+                <h4>2</h4>
+              </div>
+              <div class="p-2 w-100">
+                <span>We emphasize <a href="https://opensource.com/resources/what-open-source">open-source</a> software, hardware, standards and content. Openness not empowers everyone equally — it is a necessary force to move the manufacturing industry forward.</span>
+              </div>
+            </div>
+
+            <div class="d-flex">
+              <div class="pr-2 py-2 flex-shrink-1 my-auto">
+                <h4>3</h4>
+              </div>
+              <div class="p-2 w-100">
+                <span>We are fully transparent and entirely feedback-driven as we believe this is the only way to build the best possible engagement and collaboration platform.</span>
+              </div>
+            </div>
+
+            <div class="d-flex">
+              <div class="pr-2 py-2 flex-shrink-1 my-auto">
+                <h4>4</h4>
+              </div>
+              <div class="p-2 w-100">
+                <span>We believe in direct action to challenge the skills gap. Actions are always stronger than words.</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card flex-md-row mb-3 h-md-250">
+          <div class="card-body d-flex flex-column align-items-start">
+            <h3 class="mb-0">
+              <span class="text-dark">Leadership Team</span>
+            </h3>
+
+            <div class="d-flex">
+              <div class="pr-2 py-2 flex-shrink-1 my-auto">
+                <a href="https://www.linkedin.com/in/asherbreverman/">
+                  <img class="smev-card-photo" src="/asher_breverman_profile.png" alt="Asher Breverman">
+                </a>
+              </div>
+              <div class="p-2 w-100 my-auto">
+                <h5 class="mb-0">Asher Breverman</h5>
+                <p class="mb-0">Additive Manufacturing Engineer</p>
+                <p class="mb-0 smev-card__company"><strong><a href="https://www.osseus.com/">Osseus Fusion Systems</a></strong></p>
+              </div>
+            </div>
+
+            <div class="d-flex">
+              <div class="pr-2 py-2 flex-shrink-1 my-auto">
+                <a href="https://www.linkedin.com/in/adam-j-cook/">
+                  <img class="smev-card-photo" src="/adam_cook_profile.png" alt="Adam Cook">
+                </a>
+              </div>
+              <div class="p-2 w-100 my-auto">
+                <h5 class="mb-0">Adam Cook</h5>
+                <p class="mb-0">Chief Technical Officer</p>
+                <p class="mb-0 smev-card__company"><strong><a href="http://www.alliedstrand.com/">Alliedstrand</a></strong></p>
+              </div>
+            </div>
+
+            <div class="d-flex">
+              <div class="pr-2 py-2 flex-shrink-1 my-auto">
+                <a href="https://www.linkedin.com/in/justice-diven-4483724/">
+                  <img class="smev-card-photo" src="/justice_diven_profile.png" alt="Justice Diven">
+                </a>
+              </div>
+              <div class="p-2 w-100 my-auto">
+                <h5 class="mb-0">Justice Diven</h5>
+                <p class="mb-0">Intelligent Operations Manager</p>
+                <p class="mb-0 smev-card__company"><strong><a href="https://www.bp.com/">BP Onshore Lower 48</a></strong></p>
+              </div>
+            </div>
+
+            <div class="d-flex">
+              <div class="pr-2 py-2 flex-shrink-1 my-auto">
+                <a href="https://www.linkedin.com/in/melissa-dochter-8b558b26/">
+                  <img class="smev-card-photo" src="/melissa_dochter_profile.png" alt="Melissa Dochter">
+                </a>
+              </div>
+              <div class="p-2 w-100 my-auto">
+                <h5 class="mb-0">Melissa Dochter</h5>
+                <p class="mb-0">OEM Machine Solutions Sales Engineer</p>
+                <p class="mb-0 smev-card__company"><strong><a href="https://www.schneider-electric.com/">Schneider Electric</a></strong></p>
+              </div>
+            </div>
+
+            <div class="d-flex">
+              <div class="pr-2 py-2 flex-shrink-1 my-auto">
+                <a href="https://www.linkedin.com/in/ron-gill-atf-hsme-cmfge-9aa77b1b/">
+                  <img class="smev-card-photo" src="/ron_gill_profile.png" alt="Ron Gill">
+                </a>
+              </div>
+              <div class="p-2 w-100 my-auto">
+                <h5 class="mb-0">Ron Gill</h5>
+                <p class="mb-0">Technical Fellow (Retired)</p>
+                <p class="mb-0 smev-card__company"><strong><a href="http://www.boeing.com/">The Boeing Company</a></strong></p>
+              </div>
+            </div>
+
+            <div class="d-flex">
+              <div class="pr-2 py-2 flex-shrink-1 my-auto">
+                <a href="https://www.linkedin.com/in/mark-price-93390b14/">
+                  <img class="smev-card-photo" src="/mark_price_profile.png" alt="Mark Price">
+                </a>
+              </div>
+              <div class="p-2 w-100 my-auto">
+                <h5 class="mb-0">Mark Price</h5>
+                <p class="mb-0">Chapter Development and Relations Manager</p>
+                <p class="mb-0 smev-card__company"><strong><a href="http://www.sme.org/">SME</a></strong></p>
+              </div>
+            </div>
+
+            <div class="d-flex">
+              <div class="pr-2 py-2 flex-shrink-1 my-auto">
+                <img class="smev-card-photo" src="/blank_profile.png" alt="Thomas Gaddini">
+              </div>
+              <div class="p-2 w-100 my-auto">
+                <h5 class="mb-0">Thomas Gaddini</h5>
+                <p class="mb-0">Treasurer</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card flex-md-row mb-3 h-md-250">
+          <div class="card-body d-flex flex-column align-items-start">
+            <h3 class="mb-0">
+              <span class="text-dark">Sponsors</span>
+            </h3>
+            <div class="d-flex">
+              <div class="pr-2 py-2 flex-shrink-1">
+                <a href="http://www.alliedstrand.com/">
+                  <img class="sme-card-logo" src="/alliedstrand_yellow_short_center_logo.svg" alt="Alliedstrand">
+                </a>
+              </div>
+              <div class="p-2 w-100 my-auto">
+                <h5 class="mb-3">Alliedstrand</h5>
+                <p class="mb-3">Alliedstrand develops industry-leading automation, workholding, industrial software and product development solutions for our customers. Alliedstrand is committed to narrowing the skills gap and educating the broader manufacturing community by embracing new thinking and open-source development.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card flex-md-row mb-4 h-md-250">
+          <div class="card-body d-flex flex-column align-items-start">
+            <h3 class="mb-0">
+              <span class="text-dark">Contributors</span>
+            </h3>
+            <h5 class="card-text mb-auto py-2">Leaders that are passionate to share their expertise to build a better tomorrow for the industry.</h5>
+            <div class="d-flex">
+              <div class="pr-2 py-2 flex-shrink-1">
+                <a href="https://www.linkedin.com/in/adam-j-cook/">
+                  <img class="smev-card-photo" src="/adam_cook_profile.png" alt="Adam Cook">
+                </a>
+              </div>
+              <div class="p-2 w-100 my-auto">
+                <h5 class="mb-0">Adam Cook</h5>
+                <p class="mb-3 smev-card__company"><strong><a href="http://www.alliedstrand.com/">Alliedstrand</a></strong></p>
+                <p>Adam produces virtual events and written content around Industry 4.0 and advanced manufacturing topics for the SME Virtual Network. These include automation, robotics, machine vision, computer programming, IoT/IIoT, machine learning and data analytics.</p>
+                <p>Adam is also the lead maintainer for the SME Virtual Network's <a href="https://github.com/smevirtual">open-source</a> efforts.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="pt-4 my-md-5 pt-md-5 border-top">
+      <div class="row">
+        <div class="col-12 col-md">
+          <small class="d-block mb-3 text-muted">© SME Virtual Network 2018</small>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Social</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="https://www.meetup.com/smevirtual/">Meetup</a></li>
+            <li><a class="text-muted" href="https://github.com/smevirtual/">GitHub</a></li>
+            <li><a class="text-muted" href="https://www.linkedin.com/company/smevirtual/">LinkedIn</a></li>
+            <li><a class="text-muted" href="https://www.facebook.com/smevirtual/">Facebook</a></li>
+            <li><a class="text-muted" href="https://twitter.com/smevirtual/">Twitter</a></li>
+            <li><a class="text-muted" href="https://discord.gg/ufADa72">Discord</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Resources</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="http://www.sme.org/join/"><strong>Join SME</strong></a></li>
+            <li><a class="text-muted" href="http://www.sme.org/what-is-sme/">What is SME?</a></li>
+            <li><a class="text-muted" href="http://www.sme.org/chapters/">Find your local SME Chapter</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>About</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="https://goo.gl/forms/tLNr9Ln6tMzzgV4i2/">Contact Us</a></li>
+            <li><a class="text-muted" href="https://github.com/smedfw/community-guidelines">Community Guidelines</a></li>
+            <li><a class="text-muted" href="https://github.com/smevirtual/website">Source code for this page</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+  </div> <!-- /.container -->
 </body>
 </html>
