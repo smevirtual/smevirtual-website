@@ -94,17 +94,9 @@ $border-color: #c0bfc0 !default;
 }
 // stylelint-enable declaration-no-important
 
-.smev-header__menu .btn-link {
-  color: $white;
-
-  &:hover {
-    color: $orange;
-  }
-}
-
 .smev-header {
-  position: fixed;
-  top: 0;
+  position: absolute;
+  top: 140px;
   right: 0;
   left: 0;
   z-index: 2;
@@ -114,10 +106,13 @@ $border-color: #c0bfc0 !default;
 .smev-header__logo {
   display: inline-block;
   width: 300px;
-  padding-right: 0;
-  margin-top: 40px;
-  margin-left: 20px;
   user-select: none;
+}
+
+@include media-breakpoint-up(sm) {
+  .smev-header__brand {
+    padding-left: 15px;
+  }
 }
 
 .smev-header__brand {
@@ -128,14 +123,6 @@ $border-color: #c0bfc0 !default;
 
 .smev-header__brand a {
   display: inline-block;
-}
-
-.smev-header__menu {
-  position: absolute;
-  top: 0;
-  right: 30px;
-  height: 100%;
-  vertical-align: middle;
 }
 
 .smev-hero {
@@ -151,6 +138,9 @@ $border-color: #c0bfc0 !default;
   overflow: hidden;
   background-color: #123;
 }
+
+// Fixed Header
+//
 
 // Cards
 //

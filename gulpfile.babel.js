@@ -161,7 +161,11 @@ gulp.task("generate-favicon", done => {
 gulp.task("inject-favicon", () =>
   gulp
     .src(["dist/*.html"])
-    .pipe(realFavicon.injectFaviconMarkups(JSON.parse(fs.readFileSync(FAVICON_DATA_FILE)).favicon.html_code))
+    .pipe(
+      realFavicon.injectFaviconMarkups(JSON.parse(fs.readFileSync(FAVICON_DATA_FILE)).favicon.html_code, {
+        keep: 'meta[property="og:image"]'
+      })
+    )
     .pipe(gulp.dest("dist"))
 );
 
