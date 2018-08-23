@@ -97,7 +97,6 @@ $border-color: #c0bfc0 !default;
 .smev-header {
   position: absolute;
   top: 140px;
-  right: 0;
   left: 0;
   z-index: 2;
   line-height: 70px;
@@ -109,16 +108,16 @@ $border-color: #c0bfc0 !default;
   user-select: none;
 }
 
-@include media-breakpoint-up(sm) {
-  .smev-header__brand {
-    padding-left: 15px;
-  }
-}
-
 .smev-header__brand {
   display: inline-block;
   padding-right: 0;
   padding-left: 30px;
+}
+
+@include media-breakpoint-up(sm) {
+  .smev-header__brand {
+    padding-left: 150px;
+  }
 }
 
 .smev-header__brand a {
@@ -172,4 +171,8 @@ $border-color: #c0bfc0 !default;
 
 .smev-card__company a {
   color: $gray-800;
+}
+
+svg:hover path {
+  fill: $orange;
 }
