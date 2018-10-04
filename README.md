@@ -33,7 +33,27 @@ encountered using Windows are not considered bugs at this time.**
 
     See [this page](https://yarnpkg.com/en/docs/install).
 
+3.  Install Git Large File Storage
+
+    Git Large File Storage (or Git LFS) allows large binary assets like media source files to be managed by Git.
+
+    See [this page](https://git-lfs.github.com/) for installation instructions. If you are on macOS, installing via [Homebrew](https://brew.sh/) is recommended.
+
 ### Development Quick Start
+
+For a freshly cloned repository, run:
+
+**Step 1**
+
+```bash
+yarn install
+```
+
+**Step 2**
+
+```bash
+git lfs install
+```
 
 Once all of the above prerequisites are installed, the following commands are
 now available:
