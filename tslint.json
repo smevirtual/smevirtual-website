@@ -31,7 +31,7 @@
     "prefer-const": true,
     "quotemark": [
       true,
-      "single"
+      "double"
     ],
     "no-inferrable-types": [
       true,

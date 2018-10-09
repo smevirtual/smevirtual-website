@@ -7,8 +7,9 @@
 import autoprefixer from "autoprefixer";
 import path from "path";
 import log from "fancy-log";
+import ManifestPlugin from "webpack-manifest-plugin";
 import UglifyJsPlugin from "uglifyjs-webpack-plugin";
-import HtmlWebpackPlugin from "html-webpack-plugin";
+import webpack from "webpack";
 
 const IS_PRODUCTION = process.env.NODE_ENV === "production";
 
@@ -35,7 +36,7 @@ export default {
   mode: IS_PRODUCTION ? "production" : "development",
 
   entry: {
-    main: ["./src/scripts/index.ts"]
+    main: ["./frontend/scripts/index.ts"]
   },
 
   devtool: IS_PRODUCTION ? "source-map" : "inline-source-map",
@@ -74,7 +75,7 @@ export default {
             options: {
               plugins: () => [
                 autoprefixer({
-                  browsers: ["> 1%", "last 2 versions"]
+                  browsers: ["> 1%", "ie >= 11", "last 2 versions"]
                 })
               ]
             }
@@ -91,10 +92,14 @@ export default {
   },
 
   plugins: [
-    new HtmlWebpackPlugin({
-      inject: false,
-      filename: "index.html",
-      template: "./src/index.html"
+    new ManifestPlugin({
+      fileName: "../data/staticfiles.json"
+    }),
+    new webpack.NamedChunksPlugin(chunk => {
+      if (chunk.name) {
+        return chunk.name;
+      }
+      return chunk.mapModules(m => path.relative(m.context, m.request)).join("_");
     })
   ]
 };
