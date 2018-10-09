@@ -33,7 +33,14 @@ encountered using Windows are not considered bugs at this time.**
 
     See [this page](https://yarnpkg.com/en/docs/install).
 
-3.  Install Git Large File Storage
+3.  Install Hugo.
+
+    See [this page](https://gohugo.io/getting-started/quick-start/).
+
+    For macOS development machines, installing Hugo with [Homebrew](https://brew.sh/)
+    is recommended.
+
+4.  Install Git Large File Storage
 
     Git Large File Storage (or Git LFS) allows large binary assets like media source files to be managed by Git.
 

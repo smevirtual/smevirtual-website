@@ -5,6 +5,7 @@
  */
 
 import BrowserSync from "browser-sync";
+import { spawn } from "child_process";
 import del from "del";
 import fs from "fs";
 import gulp from "gulp";
@@ -19,6 +20,17 @@ const IS_PRODUCTION = process.env.NODE_ENV === "production";
 
 log.warn("[Gulp] build mode: ", IS_PRODUCTION ? "PRODUCTION" : "DEVELOPMENT");
 
+let suppressHugoErrors = false;
+const defaultHugoArgs = ["-d", "dist"];
+
+// Sitemaps need the absolute URL (along with the scheme) to be compatible with
+// major search engines. This changes the `baseURL` Hugo configuration setting
+// prior to deployment.
+if (IS_PRODUCTION && process.env.DEPLOY_BASE_URL) {
+  defaultHugoArgs.push("-b");
+  defaultHugoArgs.push(process.env.DEPLOY_BASE_URL);
+}
+
 const FAVICON_DATA_FILE = "favicondata.json";
 
 /**
@@ -28,7 +40,8 @@ const FAVICON_DATA_FILE = "favicondata.json";
 gulp.task("bundle", callback => {
   webpack(webpackConfig, (err, stats) => {
     if (err || stats.hasErrors()) {
-      throw new log.error("webpack", err); // eslint-disable-line new-cap
+      log.error("Bundle error: ", err);
+      callback();
     }
     log.info("[Webpack] running...");
     log.info(
@@ -43,12 +56,16 @@ gulp.task("bundle", callback => {
 });
 
 /**
- * COPY TASK
+ * COPY IMAGES TASK
  * -----------------------------------------------------------------------------
  */
-gulp.task("copy", () =>
-  gulp.src(["src/images/**/*", "src/*.txt", "src/*.json", "src/404.html"]).pipe(gulp.dest("dist"))
-);
+gulp.task("copy:images", () => gulp.src(["frontend/images/**/*"]).pipe(gulp.dest("dist")));
+
+/**
+ * COPY CONFIGS TASK
+ * -----------------------------------------------------------------------------
+ */
+gulp.task("copy:configs", () => gulp.src(["frontend/**/*.json"]).pipe(gulp.dest("dist")));
 
 /**
  * CLEAN TASK
@@ -63,12 +80,17 @@ gulp.task("clean", () => del(["dist/**/*"]));
  * changes and Browsersync will reload the browser as necessary.
  */
 gulp.task("dev-server", () => {
+  suppressHugoErrors = true;
   browserSync.init({
     server: {
       baseDir: "./dist"
     }
   });
-  gulp.watch("./src/**/*", gulp.series("bundle", "copy", "inject-favicon"));
+  gulp.watch(
+    ["config.toml", "./archetypes/**/*", "./content/**/*", "./layouts/**/*"],
+    gulp.series("hugo", "inject-favicon")
+  );
+  gulp.watch(["./frontend/**/*"], gulp.series("bundle", "copy:images", "copy:configs"));
 });
 
 /**
@@ -80,7 +102,7 @@ gulp.task("dev-server", () => {
 gulp.task("generate-favicon", done => {
   realFavicon.generateFavicon(
     {
-      masterPicture: "./src/images/master-favicon-512.png",
+      masterPicture: "./frontend/images/master-favicon-512.png",
       dest: "./dist",
       iconsPath: "/",
       design: {
@@ -186,10 +208,30 @@ gulp.task("check-favicon-update", () => {
 });
 
 /**
+ * HUGO BUILD TASK
+ * -----------------------------------------------------------------------------
+ * Builds the Hugo static site.
+ */
+gulp.task("hugo", done =>
+  spawn("hugo", defaultHugoArgs, { stdio: "inherit" }).on("close", code => {
+    if (suppressHugoErrors || code === 0) {
+      browserSync.reload();
+      done();
+    } else {
+      log.error("Hugo build task failed.");
+      done();
+    }
+  })
+);
+
+/**
  * BUILD TASK
  * -----------------------------------------------------------------------------
  */
-gulp.task("build", gulp.series("clean", "generate-favicon", "bundle", "copy", "inject-favicon"));
+gulp.task(
+  "build",
+  gulp.series("clean", "generate-favicon", "bundle", "hugo", "copy:images", "copy:configs", "inject-favicon")
+);
 
 /**
  * LOCAL SERVER RUN TASK

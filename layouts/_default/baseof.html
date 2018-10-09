@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="{{ .Site.LanguageCode | default "en" }}">
+  <head>
+    {{ partial "site/google-analytics.html" . }}
+
+    {{ block "meta" . }}{{ partial "site/meta.html" . }}{{ end }}
+
+    <title>{{ block "title" . }}{{ .Site.Title -}}{{ end }}</title>
+
+    {{ range .AlternativeOutputFormats }}
+        <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
+    {{ end }}
+
+    {{ partial "site/scripts.html" . }}
+
+    {{ block "bottom-scripts" . }}{{ end }}
+
+    {{ partial "site/linkedin-sitewide-tracking.html" . }}
+  </head>
+  <body>
+    {{ partial "site/outdated-browser.html" . }}
+
+    {{ block "header" . }}{{ partial "site/header.html" . }}{{ end }}
+
+    <main role="main">
+      {{ block "banner" . }}{{ end }}
+
+      {{ block "main" . }}{{ end }}
+    </main>
+
+    {{ block "footer" . }}{{ partial "site/footer.html" . }}{{ end }}
+  </body>
+</html>

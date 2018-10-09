@@ -1,0 +1,20 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "SME Virtual Network"
+disableKinds = ["taxonomy","taxonomyTerm"]
+publishDir = "dist"
+
+[sitemap]
+  changefreq = "monthly"
+
+[params]
+    [params.seo]
+    description = "Official homepage for the SME Virtual Network."
+    keywords = ["engineering","manufacturing","sme","smevirtual","education"]
+
+    [params.social]
+    description = "We work to energize, mobilize and engage the global engineering and manufacturing community via the Internet."
+    twitter_handle="@smevirtual"
+
+    [params.external]
+    feedback_form_url = "https://goo.gl/forms/tLNr9Ln6tMzzgV4i2"
