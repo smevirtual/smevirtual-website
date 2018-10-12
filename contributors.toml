@@ -1,0 +1,7 @@
+[params]
+    [[params.contributors]]
+    name = "Adam J. Cook"
+    info_url = "https://www.linkedin.com/in/adam-j-cook/"
+    affiliation = "Alliedstrand"
+    description = "Industry 4.0, Automation, Robotics, Machine Vision, Computer Programming, IIoT, Machine Learning and Data Analytics"
+    profile_picture_filename = "adam_cook_profile.png"

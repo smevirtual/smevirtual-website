@@ -21,7 +21,7 @@ const IS_PRODUCTION = process.env.NODE_ENV === "production";
 log.warn("[Gulp] build mode: ", IS_PRODUCTION ? "PRODUCTION" : "DEVELOPMENT");
 
 let suppressHugoErrors = false;
-const defaultHugoArgs = ["-d", "dist"];
+const defaultHugoArgs = ["-d", "dist", "--config", "config.toml,contributors.toml,leadership_team.toml,sponsors.toml"];
 
 // Sitemaps need the absolute URL (along with the scheme) to be compatible with
 // major search engines. This changes the `baseURL` Hugo configuration setting
@@ -87,7 +87,7 @@ gulp.task("dev-server", () => {
     }
   });
   gulp.watch(
-    ["config.toml", "./archetypes/**/*", "./content/**/*", "./layouts/**/*"],
+    ["*.toml", "./archetypes/**/*", "./content/**/*", "./layouts/**/*"],
     gulp.series("hugo", "inject-favicon")
   );
   gulp.watch(["./frontend/**/*"], gulp.series("bundle", "copy:images", "copy:configs"));
@@ -108,7 +108,7 @@ gulp.task("generate-favicon", done => {
       design: {
         ios: {
           pictureAspect: "backgroundAndMargin",
-          backgroundColor: "#112233",
+          backgroundColor: "#000000",
           margin: "0%",
           assets: {
             ios6AndPriorIcons: false,
@@ -121,7 +121,7 @@ gulp.task("generate-favicon", done => {
         desktopBrowser: {},
         windows: {
           pictureAspect: "noChange",
-          backgroundColor: "#112233",
+          backgroundColor: "#000000",
           onConflict: "override",
           assets: {
             windows80Ie10Tile: false,
@@ -137,8 +137,8 @@ gulp.task("generate-favicon", done => {
         androidChrome: {
           pictureAspect: "backgroundAndMargin",
           margin: "0%",
-          backgroundColor: "#112233",
-          themeColor: "#112233",
+          backgroundColor: "#000000",
+          themeColor: "#000000",
           manifest: {
             name: "SME Virtual Network",
             display: "browser",
@@ -153,7 +153,7 @@ gulp.task("generate-favicon", done => {
         },
         safariPinnedTab: {
           pictureAspect: "silhouette",
-          themeColor: "#112233"
+          themeColor: "#000000"
         }
       },
       settings: {
