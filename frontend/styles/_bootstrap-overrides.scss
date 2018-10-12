@@ -14,10 +14,11 @@ $gray-100: #f9f9f9 !default;
 $gray-600: #777677 !default;
 $gray-800: #323232 !default;
 
-$blue: #2d74da !default;
+$black: #000 !default;
+$blue: #4178be !default;
 $orange: #fe8500 !default;
 
-$primary: $orange !default;
+$primary: $blue !default;
 
 $input-btn-border-width: 2px !default;
 
@@ -30,11 +31,20 @@ $box-shadow: none !default;
 $box-shadow-lg: none !default;
 
 $link-color: $blue !default;
-$link-hover-color: $orange !default;
+$link-hover-color: $blue !default;
 
-$body-color: $gray-800 !default;
+$body-color: $black !default;
 
 $border-color: #c0bfc0 !default;
+
+$navbar-light-color: $black !default;
+$navbar-light-hover-color: $black !default;
+$navbar-light-active-color: $black !default;
+$navbar-light-disabled-color: rgba($black, 0.3) !default;
+$navbar-light-toggler-border-color: $black !default;
+
+$navbar-light-brand-color: $navbar-light-active-color !default;
+$navbar-light-brand-hover-color: $navbar-light-active-color !default;
 
 // Import Bootstrap.
 @import "../../node_modules/bootstrap/scss/bootstrap";
@@ -47,15 +57,16 @@ $border-color: #c0bfc0 !default;
   color: $white;
 }
 
-.card {
-  background-color: $gray-100;
-  border-color: #25467a;
-  border-style: solid;
-  border-width: 0 0 0 5px;
+sub,
+sup {
+  font-size: 1rem;
 }
 
-.card-body {
-  border-color: #c0bfc0;
-  border-style: solid;
-  border-width: 1px 1px 1px 0;
+sup {
+  top: -1em;
+}
+
+b,
+strong {
+  font-weight: 700;
 }
