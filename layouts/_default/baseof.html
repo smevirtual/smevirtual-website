@@ -14,8 +14,6 @@
     {{ partial "site/scripts.html" . }}
 
     {{ block "bottom-scripts" . }}{{ end }}
-
-    {{ partial "site/linkedin-sitewide-tracking.html" . }}
   </head>
   <body>
     {{ partial "site/outdated-browser.html" . }}
@@ -29,5 +27,7 @@
     </main>
 
     {{ block "footer" . }}{{ partial "site/footer.html" . }}{{ end }}
+
+    {{ partial "site/linkedin-sitewide-tracking.html" . }}
   </body>
 </html>
