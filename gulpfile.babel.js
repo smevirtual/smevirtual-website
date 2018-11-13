@@ -21,12 +21,17 @@ const IS_PRODUCTION = process.env.NODE_ENV === "production";
 log.warn("[Gulp] build mode: ", IS_PRODUCTION ? "PRODUCTION" : "DEVELOPMENT");
 
 let suppressHugoErrors = false;
-const defaultHugoArgs = ["-d", "dist", "--config", "config.toml,contributors.toml,leadership_team.toml,sponsors.toml"];
+const defaultHugoArgs = [
+  "-d",
+  "dist",
+  "--config",
+  "config.toml,contributors.toml,leadership_team.toml,sponsors.toml,partners.toml"
+];
 
 // Sitemaps need the absolute URL (along with the scheme) to be compatible with
 // major search engines. This changes the `baseURL` Hugo configuration setting
 // prior to deployment.
-if (IS_PRODUCTION && process.env.DEPLOY_BASE_URL) {
+if (process.env.DEPLOY_BASE_URL) {
   defaultHugoArgs.push("-b");
   defaultHugoArgs.push(process.env.DEPLOY_BASE_URL);
 }

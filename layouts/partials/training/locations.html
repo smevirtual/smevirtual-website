@@ -1,0 +1,6 @@
+<span class="font-medium text-lg">Locations Available</span>
+<div>
+  {{ range.Params.physical_training_locations }}
+    <span class="mt-1 mr-2 text-base badge badge-primary bg-indigo text-white">{{ . }}</span>
+  {{ end }}
+</div>

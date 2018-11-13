@@ -1,0 +1,6 @@
+<span class="font-medium text-lg">ETA</span>
+{{ if .Params.launched }}
+  <div class="mt-1 text-grey-dark">Available Now</div>
+{{ else }}
+  <div class="mt-1 text-grey-dark">{{ dateFormat "January 2006" .Params.estimated_launch_timeframe }}</div>
+{{ end }}

@@ -48,8 +48,14 @@ $navbar-light-toggler-border-color: $black !default;
 $navbar-light-brand-color: $navbar-light-active-color !default;
 $navbar-light-brand-hover-color: $navbar-light-active-color !default;
 
+$enable-transitions: false !default;
+
 // Import Bootstrap.
 @import "../../node_modules/bootstrap/scss/bootstrap";
+
+.btn {
+  font-weight: 500;
+}
 
 .btn-primary {
   color: $white;

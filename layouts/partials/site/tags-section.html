@@ -1,0 +1,17 @@
+<section>
+  <div class="pt-5 container">
+    <div class="row">
+      {{ range.Paginator.Pages.ByWeight }}
+      <div class="col-md-12">
+        <article class="py-0 mb-5">
+          <div>
+            <a class="text-black text-3xl font-medium" href="{{ .Permalink }}">{{ .Title }}</a>
+          </div>
+        </article>
+      </div>
+      {{ end }}
+
+      {{ template "_internal/pagination.html" . }}
+    </div>
+  </div>
+</section>

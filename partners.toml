@@ -1,0 +1,5 @@
+[params]
+    [[params.partners]]
+    name = "Alliedstrand"
+    url = "http://www.alliedstrand.com"
+    logo_filename = "alliedstrand_blue_short_center_logo.svg"
