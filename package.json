@@ -14,14 +14,14 @@
     "url": "https://github.com/smevirtual/website/issues"
   },
   "scripts": {
-    "build:dev": "gulp build",
+    "build:dev": "cross-env DEPLOY_BASE_URL=http://lvh.me:3000/ gulp build",
     "build:prod": "cross-env NODE_ENV=production DEPLOY_BASE_URL=https://smevirtual.com/ gulp build",
     "clean": "gulp clean",
     "deploy": "cross-env NODE_ENV=production DEPLOY_BASE_URL=https://smevirtual.com/ gulp build && firebase deploy",
     "favicon:generate": "gulp generate-favicon",
     "favicon:inject": "gulp inject-favicon",
     "favicon:update": "gulp check-favicon-update",
-    "serve:dev": "gulp serve",
+    "serve:dev": "cross-env DEPLOY_BASE_URL=http://lvh.me:3000/ gulp serve",
     "serve:firebase": "cross-env NODE_ENV=production DEPLOY_BASE_URL=https://smevirtual.com/ gulp build && firebase serve --only hosting",
     "serve:prod": "cross-env NODE_ENV=production DEPLOY_BASE_URL=https://smevirtual.com/ gulp build && http-server ./dist"
   },

@@ -1,11 +1,15 @@
 {{ define "bottom-scripts" }}
 
-<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.js" integrity="sha256-icjghcPaibMf1jv4gQIGi5MeWNHem2SispcorCiCfSg=" crossorigin="anonymous"></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.js"
+  integrity="sha256-icjghcPaibMf1jv4gQIGi5MeWNHem2SispcorCiCfSg="
+  crossorigin="anonymous"
+></script>
 
 <script type="text/javascript">
   // Load Particles.js into page header.
-  particlesJS.load('particle-field2', 'particlesjs-config.json', function() {
-    console.log('Particles.js configuration loaded.');
+  particlesJS.load("particle-field2", "particlesjs-config.json", function() {
+    console.log("Particles.js configuration loaded.");
   });
 </script>
 
@@ -13,31 +17,37 @@
 
 {{ define "main" }}
 
-<div id="particle-field2" class="p-0 jumbotron smev-jumbotron">
-</div>
+<div id="particle-field2" class="p-0 jumbotron smev-jumbotron"></div>
 
 <section class="smev-section smev-section-engagement">
   <div class="pt-5 container">
-
     <div class="row">
       <div class="col">
         <div class="smev-section__text smev-section-engagement__text">
           <h2 class="mb-3 smev-section__heading smev-section-engagement__heading">Engagement Platforms</h2>
-          <p class="mb-4 smev-section__description smev-section-engagement__description">We embrace the accessibility and connectivity of the Internet to launch immersive virtual events, unique learning experiences and always-on conversations. Discover each of our always-on platforms today.</p>
+          <p class="mb-4 smev-section__description smev-section-engagement__description">
+            We embrace the accessibility and connectivity of the Internet to launch immersive virtual events, unique
+            learning experiences and always-on conversations. Discover each of our always-on platforms today.
+          </p>
         </div>
       </div>
     </div>
 
     <div class="row">
-
       <div class="col-md-6">
         <a href="{{ .Site.Params.external.youtube_channel_url }}" class="d-flex pb-5 smev-engagement-platform">
           <div class="pr-4">
-            <img class="smev-engagement-platform__icon" src="{{ .Site.BaseURL }}stream_icon_black.svg" alt="Virtual Events">
+            <img
+              class="smev-engagement-platform__icon"
+              src="{{ .Site.BaseURL }}stream_icon_black.svg"
+              alt="Virtual Events"
+            />
           </div>
           <div class="smev-engagement-platform__content">
             <h3 class="mb-2">Virtual Events</h3>
-            <p class="mb-1 smev-engagement-platform__description">Live-streamed and pre-recorded webinars, workshops and walkthroughs.</p>
+            <p class="mb-1 smev-engagement-platform__description">
+              Live-streamed and pre-recorded webinars, workshops and walkthroughs.
+            </p>
           </div>
         </a>
       </div>
@@ -45,11 +55,17 @@
       <div class="col-md-6">
         <a href="{{ .Site.Params.external.discussion_forum_url }}" class="d-flex pb-5 smev-engagement-platform">
           <div class="pr-4">
-            <img class="smev-engagement-platform__icon" src="{{ .Site.BaseURL }}forum_icon_black.svg" alt="Discussion Forum">
+            <img
+              class="smev-engagement-platform__icon"
+              src="{{ .Site.BaseURL }}forum_icon_black.svg"
+              alt="Discussion Forum"
+            />
           </div>
           <div class="smev-engagement-platform__content">
             <h3 class="mb-2">Discussion Forum</h3>
-            <p class="mb-1 smev-engagement-platform__description">Advanced topics, insightful posts, Ask-Me-Anythings, Q&As and announcements - find it all here.</p>
+            <p class="mb-1 smev-engagement-platform__description">
+              Advanced topics, insightful posts, Ask-Me-Anythings, Q&As and announcements - find it all here.
+            </p>
           </div>
         </a>
       </div>
@@ -57,11 +73,17 @@
       <div class="col-md-6">
         <a href="{{ .Site.Params.external.discord_chat_invite_url }}" class="d-flex pb-5 smev-engagement-platform">
           <div class="pr-4">
-            <img class="smev-engagement-platform__icon" src="{{ .Site.BaseURL }}chat_icon_black.svg" alt="Chat Server">
+            <img
+              class="smev-engagement-platform__icon"
+              src="{{ .Site.BaseURL }}chat_icon_black.svg"
+              alt="Chat Server"
+            />
           </div>
           <div class="smev-engagement-platform__content">
             <h3 class="mb-2">Chat Server</h3>
-            <p class="mb-1 smev-engagement-platform__description">Realtime, always-on interaction with community members.</p>
+            <p class="mb-1 smev-engagement-platform__description">
+              Realtime, always-on interaction with community members.
+            </p>
           </div>
         </a>
       </div>
@@ -69,28 +91,34 @@
       <div class="col-md-6">
         <a href="{{ .Site.Params.external.github_org_url }}" class="d-flex pb-5 smev-engagement-platform">
           <div class="pr-4">
-            <img class="smev-engagement-platform__icon" src="{{ .Site.BaseURL }}code_icon_black.svg" alt="Open Source Work">
+            <img
+              class="smev-engagement-platform__icon"
+              src="{{ .Site.BaseURL }}code_icon_black.svg"
+              alt="Open Source Work"
+            />
           </div>
           <div class="smev-engagement-platform__content">
             <h3 class="mb-2">Open Source Work</h3>
-            <p class="mb-1 smev-engagement-platform__description">We love open-source. Take a look at our current software/hardware projects. You can get involved too!</p>
+            <p class="mb-1 smev-engagement-platform__description">
+              We love open-source. Take a look at our current software/hardware projects. You can get involved too!
+            </p>
           </div>
         </a>
       </div>
-
     </div>
-
   </div>
 </section>
 
 <section class="smev-section smev-section-sponsors">
   <div class="py-5 container">
-
     <div class="row">
       <div class="col">
         <div class="smev-section__text smev-section-sponsors__text">
           <h2 class="mb-3 smev-section__heading smev-section-sponsors__heading">Corporate Sponsors</h2>
-          <p class="mb-4 smev-section__description smev-section-sponsors__description">Our sponsors are dedicated to narrowing the skills gap and energizing future generations in adopting manufacturing as a lifelong career.</p>
+          <p class="mb-4 smev-section__description smev-section-sponsors__description">
+            Our sponsors are dedicated to narrowing the skills gap and energizing future generations in adopting
+            manufacturing as a lifelong career.
+          </p>
         </div>
       </div>
     </div>
@@ -98,25 +126,21 @@
     <div class="row">
       <div class="col">
         <div class="d-flex">
-
           {{ range $.Site.Params.sponsors }}
-            <div>
-              <a href="{{ .url }}">
-                <img class="w-100" src="{{ .Site.BaseURL }}{{ .logo_filename }}" alt="{{ .name }}">
-              </a>
-            </div>
+          <div>
+            <a href="{{ .url }}">
+              <img class="w-100" src="{{ .Site.BaseURL }}{{ .logo_filename }}" alt="{{ .name }}" />
+            </a>
+          </div>
           {{ end }}
-
         </div>
       </div>
     </div>
-
   </div>
 </section>
 
 <section class="smev-section smev-section-leadership">
   <div class="pt-5 container">
-
     <div class="row">
       <div class="col">
         <div class="smev-section__text smev-section-leadership__text">
@@ -126,64 +150,70 @@
     </div>
 
     <div class="row">
-
-
       {{ range $.Site.Params.leaders }}
-        <div class="col-md-6">
-          <div class="d-flex pb-5 smev-leader-profile">
-            <div class="pr-4">
-              <a href="{{ .info_url }}">
-                <img class="smev-photo--profile" src="{{ .Site.BaseURL }}{{ .profile_picture_filename }}" alt="{{ .name }}">
-              </a>
-            </div>
-            <div class="smev-leader-profile__text-container">
-              <h3 class="mb-2">{{ .name }}</h3>
-              <p class="mb-1 smev-leader-profile__title">{{ .title }}</p>
-              <p class="mb-0 smev-leader-profile__company"><a href="{{ .company_url }}">{{ .company_name }}</a></p>
-            </div>
+      <div class="col-md-6">
+        <div class="d-flex pb-5 smev-leader-profile">
+          <div class="pr-4">
+            <a href="{{ .info_url }}">
+              <img
+                class="smev-photo--profile"
+                src="{{ .Site.BaseURL }}{{ .profile_picture_filename }}"
+                alt="{{ .name }}"
+              />
+            </a>
+          </div>
+          <div class="smev-leader-profile__text-container">
+            <h3 class="mb-2">{{ .name }}</h3>
+            <p class="mb-1 smev-leader-profile__title">{{ .title }}</p>
+            <p class="mb-0 smev-leader-profile__company">
+              <a href="{{ .company_url }}">{{ .company_name }}</a>
+            </p>
           </div>
         </div>
+      </div>
       {{ end }}
-
     </div>
-
   </div>
 </section>
 
 <section class="smev-section smev-section-contributors">
   <div class="pt-5 container">
-
     <div class="row">
       <div class="col">
         <div class="smev-section__text smev-section-contributors__text">
           <h2 class="mb-3 smev-section__heading smev-section-contributors__heading">Contributors</h2>
-          <p class="mb-4 smev-section__description smev-section-contributors__description">Leaders that are passionate to share their expertise to build a better tomorrow for manufacturing.</p>
+          <p class="mb-4 smev-section__description smev-section-contributors__description">
+            Leaders that are passionate to share their expertise to build a better tomorrow for manufacturing.
+          </p>
         </div>
       </div>
     </div>
 
     <div class="row">
-
       {{ range $.Site.Params.contributors }}
-        <div class="col">
-          <div class="d-flex pb-5 smev-contributor-profile">
-            <div class="pr-4">
-              <a href="{{ .info_url }}">
-                <img class="smev-photo--profile" src="{{ .Site.BaseURL }}{{ .profile_picture_filename }}" alt="{{ .name }}">
-              </a>
-            </div>
-            <div class="smev-contributor-profile__text-container">
-              <h3 class="mb-3">{{ .name }}</h3>
-              <p class="mb-1 smev-contributor-profile__affiliation">{{ .affiliation }}</p>
-              <p class="mb-0 smev-contributor-profile__description">{{ .description }}</p>
-            </div>
+      <div class="col">
+        <div class="d-flex pb-5 smev-contributor-profile">
+          <div class="pr-4">
+            <a href="{{ .info_url }}">
+              <img
+                class="smev-photo--profile"
+                src="{{ .Site.BaseURL }}{{ .profile_picture_filename }}"
+                alt="{{ .name }}"
+              />
+            </a>
+          </div>
+          <div class="smev-contributor-profile__text-container">
+            <h3 class="mb-3">{{ .name }}</h3>
+            <p class="mb-1 smev-contributor-profile__affiliation">{{ .affiliation }}</p>
+            <p class="mb-0 smev-contributor-profile__description">{{ .description }}</p>
           </div>
         </div>
+      </div>
       {{ end }}
-
     </div>
-
   </div>
 </section>
+
+{{.Content}}
 
 {{ end }}

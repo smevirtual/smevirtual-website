@@ -1,0 +1,10 @@
+{{ range $.Site.Params.partners }}
+  {{ if (and (eq .name $.Params.partner) ($.Params.certificate_offered)) }}
+    <span class="font-medium text-lg">Certificate Partner</span>
+    <div class="mt-1">
+      <a href="{{ .url }}">
+        <img class="w-75" src="{{ $.Site.BaseURL }}{{ .logo_filename }}" alt="{{ .name }}" />
+      </a>
+    </div>
+  {{ end }}
+{{ end }}

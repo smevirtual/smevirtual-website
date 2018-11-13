@@ -1,0 +1,10 @@
+// Copyright 2018 SME Virtual Network Contributors. All Rights Reserved.
+// See LICENSE in the repository root for license information.
+// =============================================================================
+
+.smev-workshop {
+  & h2 {
+    @extend .text-3xl;
+    @extend .py-3;
+  }
+}

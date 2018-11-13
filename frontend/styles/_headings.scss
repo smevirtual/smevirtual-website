@@ -1,0 +1,36 @@
+// Copyright 2018 SME Virtual Network Contributors. All Rights Reserved.
+// See LICENSE in the repository root for license information.
+// =============================================================================
+
+// Headings
+// ========
+
+h1 {
+  @extend .text-4xl;
+  @extend .font-medium;
+}
+
+h2 {
+  @extend .text-3xl;
+  @extend .font-medium;
+}
+
+h3 {
+  @extend .text-2xl;
+  @extend .font-medium;
+}
+
+h4 {
+  @extend .text-xl;
+  @extend .font-medium;
+}
+
+h5 {
+  @extend .text-lg;
+  @extend .font-medium;
+}
+
+h6 {
+  @extend .text-base;
+  @extend .font-medium;
+}

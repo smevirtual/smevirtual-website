@@ -1,11 +1,14 @@
 baseURL = "/"
 languageCode = "en-us"
 title = "SME Virtual Network"
-disableKinds = ["taxonomy","taxonomyTerm"]
 publishDir = "dist"
+preserveTaxonomyNames = "true"
 
 [sitemap]
   changefreq = "monthly"
+
+[taxonomies]
+  tag = "tags"
 
 [params]
     [params.seo]
