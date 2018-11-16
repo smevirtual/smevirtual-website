@@ -3,8 +3,29 @@
 // =============================================================================
 
 .smev-workshop {
-  & h2 {
-    @extend .text-3xl;
+  & h2,
+  & h3 {
+    @extend .h2;
     @extend .py-3;
+  }
+
+  & h3 {
+    @extend .h3;
+    @extend .pb-3;
+  }
+}
+
+.smev-workshop__description {
+  & a {
+    @extend .font-medium;
+    @extend .text-ultramarine;
+  }
+
+  & ul {
+    list-style-type: square;
+
+    & :not(:last-child) {
+      @extend .pb-3;
+    }
   }
 }

@@ -32,9 +32,15 @@
   color: #12a3b4;
 }
 
+.hover-text-ultramarine {
+  &:hover {
+    @extend .text-ultramarine;
+  }
+}
+
 .hover-text-aqua {
   &:hover {
-    color: #12a3b4;
+    @extend .text-aqua;
   }
 }
 

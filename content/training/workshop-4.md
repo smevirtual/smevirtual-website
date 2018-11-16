@@ -17,25 +17,34 @@ duration_each_day_in_hours: 5
 physical_training_locations:
   - Online (Audit Only)
   - Dallas-Fort Worth
+under_construction: true
 draft: false
 ---
 
-Fugiat nulla sit dolore ut excepteur nulla fugiat consequat esse mollit. Sit proident occaecat nostrud aliqua culpa. Quis nostrud est enim id nostrud magna incididunt laborum ea excepteur reprehenderit esse. Aliqua officia cupidatat id quis do adipisicing eiusmod elit ut proident. Quis culpa anim est ea culpa.
+Machine learning (a field of Artificial Intelligence) is transforming the engineering and manufacturing industry in new and exciting ways. Large amounts of data coupled with powerful Python tooling is solving the toughest problems in manufacturing. From predicting machine downtime to proactively optimizing throughput, the proper application of machine learning is differentiating manufacturers in terms of cost, product quality and time-to-market. For students and professionals, the time is now to embrace machine learning.
 
 ## Prerequisites
 
-Aliqua proident aute proident elit. Et fugiat cupidatat aliqua consectetur minim nisi sit. Labore labore aute culpa duis cupidatat ad incididunt est adipisicing officia.
+{{< prerequisites ispythonexperiencereq="true" isbasicdataexperiencereq="true" >}}
 
-Duis id pariatur cupidatat dolore eiusmod nulla est officia laborum eiusmod nostrud id esse non. Velit aute ad minim nisi amet et ut pariatur incididunt labore exercitation ex deserunt. Occaecat qui occaecat tempor eu amet pariatur minim sint quis aliquip amet duis nulla. Eiusmod sunt officia voluptate cupidatat sunt in sint est.
+## Pre-Workshop Checklist
+
+{{< prechecklist islaptopreq="true" iswindowslaptopreq="false" ispythoninstallreq="true" isdotnetcoreinstallreq="false" isvscodereq="true" isgcpaccountreq="false"  isdockerinstallreq="true" >}}
 
 ## Syllabus
 
-Ex enim culpa ipsum ipsum in. Excepteur aliquip proident excepteur ad nisi. Ea ullamco Lorem ex ex ad nisi minim. Esse aliquip in magna nisi.
+### Day 1
 
-Cillum nulla reprehenderit sunt exercitation voluptate consequat veniam dolor anim minim amet. Ea eiusmod aliqua nostrud dolor incididunt. Dolore excepteur do ipsum velit. Aliqua qui do eiusmod exercitation quis. Exercitation velit labore tempor et in labore.
+{{< wip >}}
 
-## Frequently Asked Questions
+### Day 2
 
-Ipsum ut aliquip tempor tempor ullamco mollit dolore dolore. Fugiat ea non cillum mollit id do deserunt non adipisicing veniam mollit voluptate. Qui mollit enim est sint mollit exercitation labore proident consequat pariatur.
+{{< wip >}}
 
-Adipisicing nostrud elit non commodo adipisicing. Voluptate aute excepteur duis sint irure cillum irure aliquip. Duis fugiat consequat laboris amet irure nulla labore in est amet pariatur commodo irure.
+### Day 3
+
+{{< wip >}}
+
+## FAQs
+
+{{< faqs hasrefundablefee="true" hasseatlimitof="15" hashardware="false" cankeephardware="false" hasrefreshments="true" >}}

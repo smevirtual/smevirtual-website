@@ -8,6 +8,14 @@
     <div class="row">
       <div class="col">
         <div class="mb-4">
+          {{ partial "site/breadcrumbs.html" . }}
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="mb-4">
           {{ partial "training/meetup-group-invite.html" . }}
         </div>
       </div>
@@ -37,12 +45,19 @@
         <div class="col-lg-8">
 
           <article class="smev-workshop">
+            {{ if .Params.under_construction }}
+              <div class="mb-4">
+                {{ partial "training/under-construction.html" . }}
+              </div>
+            {{ end }}
             <div class="mb-3">
               {{ partial "training/tags.html" . }}
             </div>
             <h1 class="pb-4">{{ .Title }}</h1>
 
-            {{ .Content }}
+            <div class="smev-workshop__description">
+              {{ .Content }}
+            </div>
           </article>
 
         </div>

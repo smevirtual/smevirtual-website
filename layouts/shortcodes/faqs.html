@@ -1,0 +1,59 @@
+<h3>Why should I attend?</h3>
+<p>Manufacturing is changing rapidly. <span class="font-medium">Very rapidly.</span> Workshops are carefully chosen, developed and periodically updated with content directly corresponding to evolving industry needs. If you are a student, these skills sets can give you an edge in the job marketplace. If you are a manufacturing professional, these workshops are designed to help you grow in your career.</p>
+
+<h3>How this workshop compare to online courses like those found on Udemy, Coursera, edX and others?</h3>
+<p>We offer a more physical, peer-based and individualized approach to learning. Although the Internet is ubiquitous nowadays, manufacturing and engineering are still very face-to-face and physical team-based. Our workshops are designed to be small so participants can collaborate to solve challenging problems and build professional relationships - just like you will find out in industry.</p>
+<p>Some of our workshops even use real, physical hardware which is crucial sometimes for understanding industrial technology.</p>
+<p>That said, although we cannot vouch for any online courses, there is nothing inherently bad in participating in those programs. In fact, they can be a good way to supplement your knowledge further!</p>
+
+<h3>How much does this workshop cost?</h3>
+<p>For current SME Members, US Veterans and students, the workshops are <span class="font-medium">free</span>. For non-SME members, there may be a fee associated with the workshop (the fee varies with the type of workshop).</p>
+{{ with .Get "hasrefundablefee"}}
+<p>There is a fully-refundable $100 fee for non-students and a $50 fee for students. The fee will be <span class="font-medium">fully refunded</span> if the participant completes the workshop. This helps us discourage no-shows.</p>
+{{ end }}
+
+<h3>Really, what's the catch?</h3>
+<p>No catch. The goal of the SME Virtual Network is to narrow the skills gap. Freely available industry-driven training is essential to achieving that goal. More than that, these workshops provide an opportunity to connect with your peers and build lifelong industry relationships.</p>
+
+<h3>When will this workshop be offered? Where will the workshop be held? Where can I register?</h3>
+<p>Please join our <a href="{{ .Site.Params.external.meetup_group_url }}">Meetup Group</a> for workshop announcements! You will be able to register there when workshops open up.</p>
+
+<h3>How "hands-on" is this workshop?</h3>
+<p><span class="font-medium">Very.</span> The only way to learn advanced manufacturing and engineering technology is to learn-by-doing. We realize that so we strive to divide up workshops into 15-30 minute lecture segments and then the class is challenged to work on actual projects. Besides, no one wants to sit in a classroom all day to hear someone talk the whole time.</p>
+<h3>How many seats are available?</h3>
+{{ with .Get "hasseatlimitof"}}
+  <p>For the physical workshop session, there is strict maximum of {{ . }} seats available. This allows workshop instructors the time to individually assist workshop participants with questions.
+  <p>If you will be joining us virtually, there is no seat limit.</p>
+{{ else }}
+  <p>There is no limit on the number of participants for this workshop.</p>
+{{ end }}
+<p>Please join the waitlist if the workshop is full and you are interested. <span class="font-medium">A spot might open up!</span> We also use the amount of people on the waitlist as a gauge on how quickly we should run a workshop again.</p>
+
+{{ with .Get "hashardware" }}
+  <h3>Will hardware be provided to workshop attendees?</h3>
+  <p>Yes. The SME Virtual Network will supply all of the necessary hardware and cables. You are only responsible for bringing the items in the <a href="#pre-workshop-checklist">Pre-Workshop Checklist</a> (if applicable).</p>
+  {{ if eq ($.Get "cankeephardware") "true" }}
+    <p>Workshop attendees will be allowed to keep the hardware at the end.</p>
+  {{ end }}
+{{ end }}
+
+<h3>Will the written materials be available after the workshop ends?</h3>
+<p>Yes. In fact, all workshop materials will be be open-sourced and permissively licensed on our <a href="{{ .Site.Params.external.github_org_url }}">GitHub Organization</a>. You can also help us fix bugs and suggest improvements for subsequent workshops!</p>
+
+<h3>Will food and drink be provided during each workshop day?</h3>
+  {{ if eq (.Get "hasmeal") "true" }}
+    <p>Yes. Depending on the time of day that the workshop occurs, breakfast, lunch or dinner will be provided to workshop participants.</p>
+  {{ else if eq (.Get "hasrefreshments") "true" }}
+    <p>Yes. At the very least, light refreshments will be available for the workshop participants.</p>
+  {{ else }}
+    <p>No. Food and drink will not be provided for this workshop.</p>
+{{ end }}
+
+<h3>Is a workshop completion certificate provided?</h3>
+<p>Yes. As long as you attend and participate physically in every day of the workshop, you will receive a Certificate certified by the workshop partner. At this time, certificates are only issued for workshop participants that can attend the physical sessions.</p>
+
+<h3>Can non-SME members participate?</h3>
+<p>Yes, and we would love for you to join us! However, at this time, we are prioritizing SME Members, US Veterans and students for the physical, certificate workshops. The good news is that we broadcast all workshops publicly on our <a href="{{ .Site.Params.external.github_org_url }}">YouTube Channel</a> and you may join us at anytime there.</p>
+
+<h3>What does "Audit Only" mean?</h3>
+<p>Audit Only means that you can work along with the class, access all of the training materials and even participate in the discussions (via our <a href="{{ .Site.Params.external.discord_chat_invite_url }}">Discord Chat Server</a>, for example), but we do not offer a certificate to virtual workshop participants at this time.</p>

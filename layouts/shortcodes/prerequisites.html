@@ -1,0 +1,17 @@
+<ul>
+  {{ if eq ($.Get "isprogexperiencereq") "false" }}
+    <li><span>Programming experience in another language is helpful, but not required.</span></li>
+  {{ end }}
+
+  {{ if eq ($.Get "ispythonexperiencereq") "true" }}
+    <li><span>A working knowledge of Python is highly-recommended and assumed. If you would like to learn Python programming, check out the <span class="font-medium">Python Foundations Workshop</span>.</span></li>
+  {{ end }}
+
+  {{ if eq ($.Get "isbasicdataexperiencereq") "true" }}
+    <li><span>A working knowledge of statistics and numerical analysis is assumed. Consider attending the <span class="font-medium">Python for Data Science Workshop</span> first.</span></li>
+  {{ end }}
+
+  {{ if eq ($.Get "isbasicmlexperiencereq") "true" }}
+    <li><span>A working knowledge of basic Machine Learning theory, algorithms and Python tools is assumed. Consider attending the <span class="font-medium">Python for Machine Learning Workshop</span> first.</span></li>
+  {{ end }}
+</ul>
