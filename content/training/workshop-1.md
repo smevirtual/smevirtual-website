@@ -58,4 +58,4 @@ This last section will be all about a Python package called [Pandas](https://pan
 
 ## FAQs
 
-{{< faqs hasrefundablefee="true" hasseatlimitof="15" hashardware="false" cankeephardware="false" hasrefreshments="true" >}}
+{{< faqs isopennonmemberstudents="true" hasrefundablefee="true" hasseatlimitof="15" hashardware="false" cankeephardware="false" hasrefreshments="true" >}}

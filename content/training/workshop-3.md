@@ -47,4 +47,4 @@ This day is a journey into more advanced PLC instructions, addressing and topics
 
 ## FAQs
 
-{{< faqs hasrefundablefee="true" hasseatlimitof="10" hashardware="true" cankeephardware="false" hasrefreshments="true" >}}
+{{< faqs isopennonmemberstudents="true" hasrefundablefee="true" hasseatlimitof="10" hashardware="true" cankeephardware="false" hasrefreshments="true" >}}

@@ -48,4 +48,4 @@ This day is designed to focus on [scikit-learn](https://scikit-learn.org/stable/
 
 ## FAQs
 
-{{< faqs hasrefundablefee="true" hasseatlimitof="15" hashardware="false" cankeephardware="false" hasrefreshments="true" >}}
+{{< faqs isopennonmemberstudents="true" hasrefundablefee="true" hasseatlimitof="15" hashardware="false" cankeephardware="false" hasrefreshments="true" >}}
