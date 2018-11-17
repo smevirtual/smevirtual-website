@@ -7,6 +7,7 @@ tags:
   - Intermediate
   - Data Science
   - Python
+  - SQL
 weight: 20
 certificate_offered: true
 partner: Alliedstrand
@@ -17,25 +18,34 @@ duration_each_day_in_hours: 5
 physical_training_locations:
   - Online (Audit Only)
   - Dallas-Fort Worth
+under_construction: false
 draft: false
 ---
 
-Officia reprehenderit aliquip qui aute commodo do dolore Lorem cillum irure fugiat adipisicing ex. Laboris esse anim eiusmod amet consectetur reprehenderit exercitation ut veniam laborum. Aute ipsum pariatur aliqua quis nisi reprehenderit excepteur quis laboris labore est id elit ipsum. Quis cupidatat deserunt sunt magna aliquip Lorem incididunt officia. Irure irure pariatur aliquip culpa laboris in eu.
+Data is everywhere today and for the Smart Manufacturing operation the ability to extract value from that data is essential. Python is an extremely popular choice when analyzing, exploring and visualizing data. The market for Data Scientists is [exploding](https://www.forbes.com/sites/louiscolumbus/2017/05/13/ibm-predicts-demand-for-data-scientists-will-soar-28-by-2020/#4d4149387e3b) so there is no better time to learn this invaluable skill set.
 
 ## Prerequisites
 
-Aliqua proident aute proident elit. Et fugiat cupidatat aliqua consectetur minim nisi sit. Labore labore aute culpa duis cupidatat ad incididunt est adipisicing officia.
+{{< prerequisites ispythonexperiencereq="true" >}}
 
-Duis id pariatur cupidatat dolore eiusmod nulla est officia laborum eiusmod nostrud id esse non. Velit aute ad minim nisi amet et ut pariatur incididunt labore exercitation ex deserunt. Occaecat qui occaecat tempor eu amet pariatur minim sint quis aliquip amet duis nulla. Eiusmod sunt officia voluptate cupidatat sunt in sint est.
+## Pre-Workshop Checklist
+
+{{< prechecklist islaptopreq="true" iswindowslaptopreq="false" ispythoninstallreq="true" isdotnetcoreinstallreq="false" isvscodereq="true" isgcpaccountreq="false" isdockerinstallreq="true" >}}
 
 ## Syllabus
 
-Incididunt do occaecat enim aliquip eu et irure. Ullamco anim enim ut labore. Laboris est sunt culpa eu duis sunt ea veniam tempor quis aute id eiusmod. Ea aliqua ullamco nulla minim non sunt excepteur proident laborum eiusmod ipsum. Irure officia dolore sint ex aliquip laboris. Labore eiusmod aute ipsum cillum enim sint sunt tempor sint occaecat mollit ex.
+### Day 1
 
-Laborum nulla nisi eu dolore magna culpa commodo ipsum. Non mollit do sit in velit ut cillum et in anim fugiat mollit eu amet. Eiusmod ut labore non ullamco proident Lorem. Aliquip in ea dolore anim nostrud. Occaecat aliquip consequat cillum veniam incididunt est magna est quis cillum qui ut irure ullamco.
+The first day will be used to get everyone up to speed with the Python-specific tooling that is commonly used for data analytics. This tooling includes the [Jupyter ecosystem](http://jupyter.org/), but also exploring some challenging in-class manufacturing data problems with [NumPy](http://www.numpy.org/), [Matplotlib](https://matplotlib.org/), [Pandas](https://pandas.pydata.org/) and [seaborn](https://seaborn.pydata.org/).
 
-## Frequently Asked Questions
+### Day 2
 
-Ea amet magna ullamco voluptate tempor ex minim tempor culpa nulla ipsum mollit est aute. Proident tempor duis ipsum aute. Esse proident mollit commodo cupidatat veniam cillum dolor consectetur officia nostrud.
+We will set up a [PostgreSQL](https://www.postgresql.org/) database using [Docker](https://docs.docker.com/install/). After that, we will use Python APIs to connect to various manufacturing-oriented data sources in order to extract insight and value from them. This is a great skill to learn since extracting value from data is what Data Science is all about!
 
-Elit ipsum aute et eu duis exercitation sint ad. Amet in esse proident labore consequat adipisicing ad commodo irure pariatur. Exercitation aliqua minim exercitation aliquip mollit ullamco consequat labore officia amet.
+### Day 3
+
+This day is designed to focus on [scikit-learn](https://scikit-learn.org/stable/) which is a machine learning library for Python. If you are interested in practical or research applications of machine learning, this day is for you.
+
+## FAQs
+
+{{< faqs isopennonmemberstudents="true" hasrefundablefee="true" hasseatlimitof="15" hashardware="false" cankeephardware="false" hasrefreshments="true" >}}

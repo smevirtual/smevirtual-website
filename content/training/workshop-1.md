@@ -17,25 +17,45 @@ duration_each_day_in_hours: 5
 physical_training_locations:
   - Online (Audit Only)
   - Dallas-Fort Worth
+under_construction: false
 draft: false
 ---
 
-Sunt non cupidatat laborum labore tempor. Eu sint ipsum id voluptate cillum eu officia cillum eiusmod aute tempor cupidatat occaecat excepteur. Laboris mollit fugiat pariatur irure. Est ullamco sunt magna in nulla enim qui dolor velit. Ea cillum in eu incididunt eiusmod ipsum commodo non ex nulla non amet voluptate. Ea deserunt aute fugiat anim aliqua amet dolor qui anim.
+Python programming is on the rise! For the modern engineer, computer programming is a mandatory skill set when interacting with advanced manufacturing, robotics design, data analytics and machine learning. Python is an approachable language with a clean syntax and a vast collection of reusable libraries. Python is in [high demand](https://www.codingdojo.com/blog/7-most-in-demand-programming-languages-of-2018/) by employers so it is a great language to learn for both students, experienced professionals and everyone in between.
 
 ## Prerequisites
 
-Aliqua proident aute proident elit. Et fugiat cupidatat aliqua consectetur minim nisi sit. Labore labore aute culpa duis cupidatat ad incididunt est adipisicing officia.
+{{< prerequisites isprogexperiencereq="false" >}}
 
-Duis id pariatur cupidatat dolore eiusmod nulla est officia laborum eiusmod nostrud id esse non. Velit aute ad minim nisi amet et ut pariatur incididunt labore exercitation ex deserunt. Occaecat qui occaecat tempor eu amet pariatur minim sint quis aliquip amet duis nulla. Eiusmod sunt officia voluptate cupidatat sunt in sint est.
+## Pre-Workshop Checklist
+
+{{< prechecklist islaptopreq="true" iswindowslaptopreq="false" ispythoninstallreq="true" isdotnetcoreinstallreq="false" isvscodereq="true" isgcpaccountreq="false" isdockerinstallreq="false" >}}
 
 ## Syllabus
 
-In qui proident velit in laborum sint esse aute Lorem pariatur dolore. Aliqua ea consequat enim ullamco. Qui laborum tempor aliquip sint veniam adipisicing consectetur ea exercitation aliquip. Exercitation culpa voluptate pariatur minim labore Lorem adipisicing consequat voluptate. Aute quis et eu est. Exercitation occaecat cillum sunt nisi nostrud. Fugiat nisi excepteur magna in.
+### Day 1
 
-Occaecat sit quis excepteur cillum culpa reprehenderit commodo nostrud nostrud sint amet aute. Laboris amet ea amet amet mollit exercitation pariatur proident mollit aliquip in. Et reprehenderit elit cupidatat qui consectetur veniam fugiat nostrud ea amet aliqua tempor fugiat consectetur. Nostrud est consequat excepteur non consequat est ullamco labore ut tempor nulla. Irure nostrud enim proident anim cupidatat.
+This day is dedicated to introducing the basics of Python programming, managing Python packages, working with Python support tooling and getting your feet wet on some actual Python projects.
 
-## Frequently Asked Questions
+Topics covered will include:
 
-Voluptate consequat duis nisi enim ex sunt ipsum magna dolor sunt cillum quis. Quis quis mollit adipisicing adipisicing minim aliquip consectetur commodo duis minim officia. In et ad duis amet. Nostrud enim sit qui consequat non ullamco. Consectetur nostrud elit enim aliquip incididunt. Reprehenderit aute fugiat ullamco tempor. Occaecat cupidatat ad veniam incididunt velit labore proident elit eu dolore ea amet cupidatat deserunt.
+- Data types.
+- Packages and importing.
+- Reading and writing data.
+- Classes and objects.
+- Control flow.
+- Debugging.
+- Testing.
+- Code documentation.
 
-Nulla sunt labore dolor consectetur culpa nostrud excepteur nisi nisi. Tempor excepteur mollit sint voluptate do tempor. Proident nisi cillum tempor quis eiusmod. Nisi sint adipisicing elit Lorem dolor. Id non aliquip dolor veniam enim. Amet adipisicing excepteur non Lorem cupidatat ex deserunt tempor. Dolor fugiat minim aliquip irure.
+### Day 2
+
+We will explore the very powerful and popular [NumPy](http://www.numpy.org/) and [Matplotlib](https://matplotlib.org/) Python packages for performing numerical analysis and data visualization.
+
+### Day 3
+
+This last section will be all about a Python package called [Pandas](https://pandas.pydata.org/). Pandas is great for data wrangling and data analysis and so we will work on some manufacturing-oriented data sets with it.
+
+## FAQs
+
+{{< faqs isopennonmemberstudents="true" hasrefundablefee="true" hasseatlimitof="15" hashardware="false" cankeephardware="false" hasrefreshments="true" >}}
