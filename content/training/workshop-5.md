@@ -54,4 +54,4 @@ Industrial sensors and compact embedded systems are starting to become ubiquitou
 
 ## FAQs
 
-{{< faqs isopennonmemberstudents="true" hasrefundablefee="true" hasseatlimitof="15" hashardware="true" cankeephardware="true" hasrefreshments="true" >}}
+{{< faqs isopennonmemberstudents="true" hasseatlimitof="15" hashardware="true" cankeephardware="true" hasrefreshments="true" >}}
