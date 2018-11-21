@@ -8,6 +8,7 @@ tags:
   - Machine Learning
   - Python
 weight: 40
+repo_url: https://github.com/smevirtual/python_for_ml_workshop
 certificate_offered: true
 partner: Alliedstrand
 launched: false

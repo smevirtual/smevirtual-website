@@ -8,6 +8,7 @@ tags:
   - Maintenance
   - PLC-PAC
 weight: 30
+repo_url: https://github.com/smevirtual/plc_foundations_workshop
 certificate_offered: true
 partner: Alliedstrand
 launched: false

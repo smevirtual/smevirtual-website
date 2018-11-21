@@ -8,6 +8,7 @@ tags:
   - Python
   - Machine Vision
 weight: 80
+repo_url: https://github.com/smevirtual/machine_vision_foundations_workshop
 certificate_offered: true
 partner: Alliedstrand
 launched: false
