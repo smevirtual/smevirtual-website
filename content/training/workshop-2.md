@@ -9,6 +9,7 @@ tags:
   - Python
   - SQL
 weight: 20
+repo_url: https://github.com/smevirtual/python_for_data_science_workshop
 certificate_offered: true
 partner: Alliedstrand
 launched: false

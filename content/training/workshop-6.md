@@ -7,6 +7,7 @@ tags:
   - Advanced
   - Machine Learning
 weight: 60
+repo_url: https://github.com/smevirtual/applied_dl_workshop
 certificate_offered: true
 partner: Alliedstrand
 launched: false

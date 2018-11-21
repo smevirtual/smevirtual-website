@@ -2,7 +2,7 @@
 title: Robotics Foundations
 date: "2018-11-16"
 slug: robotics-foundations
-description: Get started with understanding, designing and programming robotics, embedded systems and machine vision in a applied setting.
+description: Get started with understanding, designing and programming robotics, embedded systems and machine vision in an applied setting.
 tags:
   - Foundational
   - Python
@@ -10,6 +10,7 @@ tags:
   - Machine Vision
   - Embedded Systems
 weight: 70
+repo_url: https://github.com/smevirtual/robotics_foundations_workshop
 certificate_offered: true
 partner: Alliedstrand
 launched: false

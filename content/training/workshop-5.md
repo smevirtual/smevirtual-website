@@ -7,6 +7,7 @@ tags:
   - Intermediate
   - IIoT
 weight: 50
+repo_url: https://github.com/smevirtual/iiot_and_cloud_workshop
 certificate_offered: true
 partner: Alliedstrand
 launched: false

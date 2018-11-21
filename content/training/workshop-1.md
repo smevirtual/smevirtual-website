@@ -8,6 +8,7 @@ tags:
   - Computer Programming
   - Python
 weight: 10
+repo_url: https://github.com/smevirtual/python_foundations_workshop
 certificate_offered: true
 partner: Alliedstrand
 launched: false
