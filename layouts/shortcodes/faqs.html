@@ -16,8 +16,13 @@
 <p>No catch. The overall goal of the SME Virtual Network is to narrow the skills gap. Freely available industry-driven training is essential to achieving that goal. More than that, these workshops provide an opportunity to connect with your peers and build lifelong industry relationships.</p>
 
 <h3>Is there a No-Show Policy?</h3>
-<p>Yes. To discourage no-shows, a credit/debit card will be required at workshop registration. You will only be charged if you do not show every day of the workshop or if you notify us that you will not be able to show less than two weeks prior to the first day of the workshop. The no-show fee is $100 (plus any additional transaction fees from the payment processor).</p>
-<p>For qualified emergency situations where you can no longer participate in the workshop, no fee will be assessed.</p>
+{{ with .Get "hasstrictnoshowpolicy"}}
+  <p>Yes. To discourage no-shows, a credit/debit card will be required at workshop registration. You will only be charged if you do not show every day of the workshop or if you notify us that you will not be able to show less than two weeks prior to the first day of the workshop. The no-show fee is $100 (plus any additional transaction fees from the payment processor).</p>
+  <p>For qualified emergency situations where you can no longer participate in the workshop, no fee will be assessed.</p>
+{{ else }}
+  <p>Currently, we do not have an official policy. However, if we start to encounter substantial amounts of no-shows, we will have to implement one.</p>
+  <p>If you register for a workshop, <span class="font-medium">please</span> try to attend every day. Not doing so potentially deprives another student or professional of a workshop seat that could have been utilized.</p>
+{{ end }}
 
 <h3>When will this workshop be offered? Where will the workshop be held? Where can I register?</h3>
 <p>Please join our <a href="{{ .Site.Params.external.meetup_group_url }}">Meetup Group</a> for workshop announcements! You will be able to register there when workshops open up.</p>
