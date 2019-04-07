@@ -131,44 +131,6 @@
   </div>
 </section>
 
-<section class="smev-section smev-section-contributors">
-  <div class="pt-5 container">
-    <div class="row">
-      <div class="col">
-        <div class="smev-section__text smev-section-contributors__text">
-          <h2 class="mb-3 smev-section__heading smev-section-contributors__heading">Contributors</h2>
-          <p class="mb-4 smev-section__description smev-section-contributors__description">
-            Leaders that are passionate to share their expertise to build a better tomorrow for manufacturing.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      {{ range $.Site.Params.contributors }}
-      <div class="col">
-        <div class="d-flex pb-5 smev-contributor-profile">
-          <div class="pr-4">
-            <a href="{{ .info_url }}">
-              <img
-                class="smev-photo--profile"
-                src="{{ .Site.BaseURL }}{{ .profile_picture_filename }}"
-                alt="{{ .name }}"
-              />
-            </a>
-          </div>
-          <div class="smev-contributor-profile__text-container">
-            <h3 class="mb-3">{{ .name }}</h3>
-            <p class="mb-1 smev-contributor-profile__affiliation">{{ .affiliation }}</p>
-            <p class="mb-0 smev-contributor-profile__description">{{ .description }}</p>
-          </div>
-        </div>
-      </div>
-      {{ end }}
-    </div>
-  </div>
-</section>
-
 {{.Content}}
 
 {{ end }}
