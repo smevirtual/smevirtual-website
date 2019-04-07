@@ -1,13 +1,5 @@
 [params]
     [[params.leaders]]
-    name = "Adam J. Cook"
-    info_url = "https://www.linkedin.com/in/adam-j-cook/"
-    title = "Chief Technical Officer"
-    company_name = "Alliedstrand"
-    company_url = "http://www.alliedstrand.com"
-    profile_picture_filename = "adam_cook_profile.png"
-
-    [[params.leaders]]
     name = "Justice Diven"
     info_url = "https://www.linkedin.com/in/justice-diven-4483724/"
     title = "Intelligent Operations Manager"
