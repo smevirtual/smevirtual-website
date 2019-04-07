@@ -1,23 +1,8 @@
 {{ define "bottom-scripts" }}
 
-<script
-  src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.js"
-  integrity="sha256-icjghcPaibMf1jv4gQIGi5MeWNHem2SispcorCiCfSg="
-  crossorigin="anonymous"
-></script>
-
-<script type="text/javascript">
-  // Load Particles.js into page header.
-  particlesJS.load("particle-field2", "particlesjs-config.json", function() {
-    console.log("Particles.js configuration loaded.");
-  });
-</script>
-
 {{ end }}
 
 {{ define "main" }}
-
-<div id="particle-field2" class="p-0 jumbotron smev-jumbotron"></div>
 
 <section class="smev-section smev-section-engagement">
   <div class="pt-5 container">
@@ -109,36 +94,6 @@
   </div>
 </section>
 
-<section class="smev-section smev-section-sponsors">
-  <div class="py-5 container">
-    <div class="row">
-      <div class="col">
-        <div class="smev-section__text smev-section-sponsors__text">
-          <h2 class="mb-3 smev-section__heading smev-section-sponsors__heading">Corporate Sponsors</h2>
-          <p class="mb-4 smev-section__description smev-section-sponsors__description">
-            Our sponsors are dedicated to narrowing the skills gap and energizing future generations in adopting
-            manufacturing as a lifelong career.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col">
-        <div class="d-flex">
-          {{ range $.Site.Params.sponsors }}
-          <div>
-            <a href="{{ .url }}">
-              <img class="w-100" src="{{ .Site.BaseURL }}{{ .logo_filename }}" alt="{{ .name }}" />
-            </a>
-          </div>
-          {{ end }}
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section class="smev-section smev-section-leadership">
   <div class="pt-5 container">
     <div class="row">
@@ -168,44 +123,6 @@
             <p class="mb-0 smev-leader-profile__company">
               <a href="{{ .company_url }}">{{ .company_name }}</a>
             </p>
-          </div>
-        </div>
-      </div>
-      {{ end }}
-    </div>
-  </div>
-</section>
-
-<section class="smev-section smev-section-contributors">
-  <div class="pt-5 container">
-    <div class="row">
-      <div class="col">
-        <div class="smev-section__text smev-section-contributors__text">
-          <h2 class="mb-3 smev-section__heading smev-section-contributors__heading">Contributors</h2>
-          <p class="mb-4 smev-section__description smev-section-contributors__description">
-            Leaders that are passionate to share their expertise to build a better tomorrow for manufacturing.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      {{ range $.Site.Params.contributors }}
-      <div class="col">
-        <div class="d-flex pb-5 smev-contributor-profile">
-          <div class="pr-4">
-            <a href="{{ .info_url }}">
-              <img
-                class="smev-photo--profile"
-                src="{{ .Site.BaseURL }}{{ .profile_picture_filename }}"
-                alt="{{ .name }}"
-              />
-            </a>
-          </div>
-          <div class="smev-contributor-profile__text-container">
-            <h3 class="mb-3">{{ .name }}</h3>
-            <p class="mb-1 smev-contributor-profile__affiliation">{{ .affiliation }}</p>
-            <p class="mb-0 smev-contributor-profile__description">{{ .description }}</p>
           </div>
         </div>
       </div>
