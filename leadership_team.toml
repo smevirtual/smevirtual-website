@@ -30,8 +30,3 @@
     company_name = "SME"
     company_url = "http://www.sme.org"
     profile_picture_filename = "mark_price_profile.png"
-
-    [[params.leaders]]
-    name = "Thomas Gaddini"
-    title = "Treasurer"
-    profile_picture_filename = "blank_profile.png"
