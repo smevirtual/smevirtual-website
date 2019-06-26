@@ -247,12 +247,6 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# For 'gulp-real-favicon'
-favicondata.json
-
-# Firebase artifacts
-.firebase/
-
 # Hugo
 public/
 resources/

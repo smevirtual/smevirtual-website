@@ -9,15 +9,17 @@
 <meta name="googlebot" content="index,follow">
 <meta name="google" content="nositelinkssearchbox">
 
+<meta name="generated" content="{{ now.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}">
+
 <!-- For Facebook, Reddit and some other social networks -->
 <!-- Thumbnail size is 500px x 500px -->
-<meta name="thumbnail"           content="{{ .Site.BaseURL }}thumbnail.png">
+<meta name="thumbnail"           content="google_thumbnail--light.png">
 <meta property="og:type"         content="website">
 <meta property="og:title"        content="{{ .Site.Title }}">
 <meta property="og:description"  content="{{ .Site.Params.social.description }}">
 
 <!-- Facebook Card image size is specified in 'og:image:width' and 'og:image:height' -->
-<meta property="og:image"        content="{{ .Site.BaseURL }}og_card_thumbnail.png">
+<meta property="og:image"        content="og_card_thumbnail--light.png">
 <meta property="og:image:width"  content="1200">
 <meta property="og:image:height" content="1200">
 
@@ -26,8 +28,14 @@
 <meta name="twitter:site"        content="{{ .Site.Params.social.twitter_handle }}">
 <meta name="twitter:creator"     content="{{ .Site.Params.social.twitter_handle }}">
 
-<!-- For Google+ (Schema.org) -->
-<meta itemprop="name" content="{{ .Site.Title }}">
-<meta itemprop="description" content="{{ .Site.Params.social.description }}">
-<!-- Image size is 1920px x 1080px -->
-<meta itemprop="image" content="{{ .Site.BaseURL }}rich_snippet.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="mask-icon" href="safari-pinned-tab.svg" color="#3151b7">
+<link rel="shortcut icon" href="favicon.ico">
+<meta name="apple-mobile-web-app-title" content="SME Virtual Network">
+<meta name="application-name" content="SME Virtual Network">
+<meta name="msapplication-TileColor" content="#ff0000">
+<meta name="msapplication-TileImage" content="mstile-144x144.png">
+<meta name="theme-color" content="#ffffff"></head>

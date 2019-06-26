@@ -9,8 +9,5 @@
   },
   "eslint.packageManager": "yarn",
   "html.format.enable": false,
-  "files.associations": {
-    "yarn.lock": "yaml"
-  },
   "eslint.autoFixOnSave": true
 }

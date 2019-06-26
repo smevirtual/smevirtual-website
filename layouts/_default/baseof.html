@@ -16,18 +16,13 @@
     {{ block "bottom-scripts" . }}{{ end }}
   </head>
   <body>
-    {{ partial "site/outdated-browser.html" . }}
-
     {{ block "header" . }}{{ partial "site/header.html" . }}{{ end }}
 
-    <main role="main">
-      {{ block "banner" . }}{{ end }}
-
+    <main>
+      {{ block "news-ticker" . }}{{ partial "site/news-ticker.html" . }}{{ end }}
       {{ block "main" . }}{{ end }}
     </main>
 
     {{ block "footer" . }}{{ partial "site/footer.html" . }}{{ end }}
-
-    {{ partial "site/linkedin-sitewide-tracking.html" . }}
   </body>
 </html>

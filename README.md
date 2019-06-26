@@ -1,5 +1,10 @@
 ## SME Virtual Network Website
 
+[![Build Status](https://dev.azure.com/smevirtual/smevirtual-website/_apis/build/status/smevirtual.smevirtual-website?branchName=master)](https://dev.azure.com/smevirtual/smevirtual-website/_build/latest?definitionId=3&branchName=master)
+<a href="https://github.com/smevirtual/smevirtual-website/blob/master/LICENSE">
+<img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="The SME Virtual Network website source is released under The MIT License." />
+</a>
+
 This repository contains the source code for the official homepage of the SME
 Virtual Network found at [smevirtual.com](https://www.smevirtual.com).
 
@@ -22,7 +27,7 @@ machine prior to working with this codebase.
 **Developers should use macOS or Linux to work with this codebase. Issues
 encountered using Windows are not considered bugs at this time.**
 
-1.  Install Node.js version 8.0 or greater.
+1.  Install Node.js version 10.0 or greater.
 
     See [this page](https://nodejs.org/en/download/).
 
@@ -50,41 +55,26 @@ encountered using Windows are not considered bugs at this time.**
 
 For a freshly cloned repository, run:
 
-**Step 1**
-
 ```bash
 yarn install
-```
-
-**Step 2**
-
-```bash
-git lfs install
 ```
 
 Once all of the above prerequisites are installed, the following commands are
 now available:
 
-| Command                   | Description                                                                                                                                                                        |
-| ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `yarn run build:dev`      | Build project in development mode. Development mode artifacts that are generated are suitable for easier debugging.                                                                |
-| `yarn run build:prod`     | Build project in production mode. Production mode artifacts that are generated are suitable for deployment to Firebase Hosting (or any CDN).                                       |
-| `yarn run clean`          | Delete the `/dist` folder which holds the generated artifacts from the build process.                                                                                              |
-| `yarn run deploy`         | Build project artifacts in production mode and deploy to Firebase Hosting.                                                                                                         |
-| `yarn run serve:dev`      | Build project artifacts in development mode and run a development browser that will automatically refresh when source files are changed and saved.                                 |
-| `yarn run serve:firebase` | Build project artifacts in production mode and launch a local Firebase Hosting environment to verify how the project will look when deployed to a public Firebase Hosting project. |
-| `yarn run serve:prod`     | Build project artifacts in production mode and launch a basic, local HTTP server without automatic reloading.                                                                      |
+| Command               | Description                                                                                                                                        |
+| --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `yarn run build:dev`  | Build project in development mode. Development mode artifacts that are generated are suitable for easier debugging.                                |
+| `yarn run build:prod` | Build project in production mode.                                                                                                                  |
+| `yarn run clean`      | Delete the `/dist` folder which holds the generated artifacts from the build process.                                                              |
+| `yarn run serve:dev`  | Build project artifacts in development mode and run a development browser that will automatically refresh when source files are changed and saved. |
+| `yarn run serve:prod` | Build project artifacts in production mode and launch a basic, local HTTP server without automatic reloading.                                      |
 
 ### Hosting Environment
 
-This project is set up to deploy to a [Firebase Hosting](https://firebase.google.com/docs/hosting/)
-environment. However, there is no reason that this project cannot be deployed to
-another hosting service of your choosing. If you choose another hosting service,
-delete the `.firebaserc` and `firebase.json` files in the root of the
-repository as they are only needed by Firebase.
-
-If you choose to use Firebase Hosting, then you must change the `smevirtual-proj`
-key in `.firebaserc` to your Firebase project.
+This project is set up to deploy to [GitHub Pages](https://pages.github.com/).
+However, there is no reason that this project cannot be deployed to
+another hosting service of your choosing.
 
 ### Community Participation Guidelines
 
