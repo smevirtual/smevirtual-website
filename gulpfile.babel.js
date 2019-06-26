@@ -7,10 +7,8 @@
 import BrowserSync from "browser-sync";
 import { spawn } from "child_process";
 import del from "del";
-import fs from "fs";
 import gulp from "gulp";
 import log from "fancy-log";
-import realFavicon from "gulp-real-favicon";
 import webpack from "webpack";
 import webpackConfig from "./webpack.config.babel";
 
@@ -21,7 +19,7 @@ const IS_PRODUCTION = process.env.NODE_ENV === "production";
 log.warn("[Gulp] build mode: ", IS_PRODUCTION ? "PRODUCTION" : "DEVELOPMENT");
 
 let suppressHugoErrors = false;
-const defaultHugoArgs = ["-d", "dist", "--config", "config.toml,leadership_team.toml,partners.toml"];
+const defaultHugoArgs = ["-d", "docs", "--config", "config.toml,leadership_team.toml"];
 
 // Sitemaps need the absolute URL (along with the scheme) to be compatible with
 // major search engines. This changes the `baseURL` Hugo configuration setting
@@ -30,8 +28,6 @@ if (process.env.DEPLOY_BASE_URL) {
   defaultHugoArgs.push("-b");
   defaultHugoArgs.push(process.env.DEPLOY_BASE_URL);
 }
-
-const FAVICON_DATA_FILE = "favicondata.json";
 
 /**
  * WEBPACK BUNDLE TASK
@@ -59,19 +55,19 @@ gulp.task("bundle", callback => {
  * COPY IMAGES TASK
  * -----------------------------------------------------------------------------
  */
-gulp.task("copy:images", () => gulp.src(["frontend/images/**/*"]).pipe(gulp.dest("dist")));
+gulp.task("copy:images", () => gulp.src(["frontend/images/**", "frontend/meta/**"]).pipe(gulp.dest("docs")));
 
 /**
  * COPY CONFIGS TASK
  * -----------------------------------------------------------------------------
  */
-gulp.task("copy:configs", () => gulp.src(["frontend/**/*.json"]).pipe(gulp.dest("dist")));
+gulp.task("copy:configs", () => gulp.src(["frontend/**/*.json"]).pipe(gulp.dest("docs")));
 
 /**
  * CLEAN TASK
  * -----------------------------------------------------------------------------
  */
-gulp.task("clean", () => del(["dist/**/*"]));
+gulp.task("clean", () => del(["docs/**", "!docs", "!docs/CNAME"]));
 
 /**
  * RUN DEVELOPMENT SERVER TASK
@@ -82,129 +78,15 @@ gulp.task("clean", () => del(["dist/**/*"]));
 gulp.task("dev-server", () => {
   suppressHugoErrors = true;
   browserSync.init({
+    host: "lvh.me",
+    port: 3000,
+    open: "external",
     server: {
-      baseDir: "./dist"
+      baseDir: "./docs"
     }
   });
-  gulp.watch(
-    ["*.toml", "./archetypes/**/*", "./content/**/*", "./layouts/**/*"],
-    gulp.series("hugo", "inject-favicon")
-  );
+  gulp.watch(["*.toml", "./archetypes/**/*", "./content/**/*", "./layouts/**/*"], gulp.series("hugo"));
   gulp.watch(["./frontend/**/*"], gulp.series("bundle", "copy:images", "copy:configs"));
-});
-
-/**
- * GENERATE FAVICONS TASK
- * -----------------------------------------------------------------------------
- * Generates all of the favicons and other icon assets from the master favicon
- * image.
- */
-gulp.task("generate-favicon", done => {
-  realFavicon.generateFavicon(
-    {
-      masterPicture: "./frontend/images/master-favicon-512.png",
-      dest: "./dist",
-      iconsPath: "/",
-      design: {
-        ios: {
-          pictureAspect: "backgroundAndMargin",
-          backgroundColor: "#000000",
-          margin: "0%",
-          assets: {
-            ios6AndPriorIcons: false,
-            ios7AndLaterIcons: false,
-            precomposedIcons: false,
-            declareOnlyDefaultIcon: true
-          },
-          appName: "SME Virtual Network"
-        },
-        desktopBrowser: {},
-        windows: {
-          pictureAspect: "noChange",
-          backgroundColor: "#000000",
-          onConflict: "override",
-          assets: {
-            windows80Ie10Tile: false,
-            windows10Ie11EdgeTiles: {
-              small: false,
-              medium: true,
-              big: false,
-              rectangle: false
-            }
-          },
-          appName: "SME Virtual Network"
-        },
-        androidChrome: {
-          pictureAspect: "backgroundAndMargin",
-          margin: "0%",
-          backgroundColor: "#000000",
-          themeColor: "#000000",
-          manifest: {
-            name: "SME Virtual Network",
-            display: "browser",
-            orientation: "notSet",
-            onConflict: "override",
-            declared: true
-          },
-          assets: {
-            legacyIcon: false,
-            lowResolutionIcons: false
-          }
-        },
-        safariPinnedTab: {
-          pictureAspect: "silhouette",
-          themeColor: "#000000"
-        }
-      },
-      settings: {
-        scalingAlgorithm: "Mitchell",
-        errorOnImageTooSmall: false,
-        readmeFile: false,
-        htmlCodeFile: false,
-        usePathAsIs: false
-      },
-      versioning: {
-        paramName: "v",
-        paramValue: "qABA4X8PYp"
-      },
-      markupFile: FAVICON_DATA_FILE
-    },
-    () => {
-      done();
-    }
-  );
-});
-
-/**
- * INJECT FAVICONS TASK
- * -----------------------------------------------------------------------------
- * Injects the generated favicons and icon assets into the `index.html` file.
- */
-gulp.task("inject-favicon", () =>
-  gulp
-    .src(["dist/*.html"])
-    .pipe(
-      realFavicon.injectFaviconMarkups(JSON.parse(fs.readFileSync(FAVICON_DATA_FILE)).favicon.html_code, {
-        keep: 'meta[property="og:image"]'
-      })
-    )
-    .pipe(gulp.dest("dist"))
-);
-
-/**
- * CHECK FOR FAVICON STYLE/SETTING UPDATES TASK
- * -----------------------------------------------------------------------------
- * Run a check with the RealFaviconGenerator service (https://realfavicongenerator.net/)
- * for potential updates for favicons. This is important because from time-to-time,
- * device, platform and web browsers update their favicon and icon requirements.
- */
-gulp.task("check-favicon-update", () => {
-  const currentVersion = JSON.parse(fs.readFileSync(FAVICON_DATA_FILE)).version;
-  realFavicon.checkForUpdates(currentVersion, err => {
-    if (err) {
-      throw err;
-    }
-  });
 });
 
 /**
@@ -228,10 +110,7 @@ gulp.task("hugo", done =>
  * BUILD TASK
  * -----------------------------------------------------------------------------
  */
-gulp.task(
-  "build",
-  gulp.series("clean", "generate-favicon", "bundle", "hugo", "copy:images", "copy:configs", "inject-favicon")
-);
+gulp.task("build", gulp.series("clean", "bundle", "hugo", "copy:images", "copy:configs"));
 
 /**
  * LOCAL SERVER RUN TASK

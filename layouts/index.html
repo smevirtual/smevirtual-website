@@ -4,128 +4,100 @@
 
 {{ define "main" }}
 
-<section class="smev-section smev-section-engagement">
-  <div class="pt-5 container">
-    <div class="row">
-      <div class="col">
-        <div class="smev-section__text smev-section-engagement__text">
-          <h2 class="mb-3 smev-section__heading smev-section-engagement__heading">Engagement Platforms</h2>
-          <p class="mb-4 smev-section__description smev-section-engagement__description">
-            We embrace the accessibility and connectivity of the Internet to launch immersive virtual events, unique
-            learning experiences and always-on conversations. Discover each of our always-on platforms today.
-          </p>
+<section class="smev--features">
+  <div class="smev--container smev--py--layout--3">
+    <h1 class="smev--section-header__light smev--pb--layout--3">Our Platforms and Goals</h1>
+    <div class="smev--features--grid">
+      <article class="smev--features--item">
+        <img src="virtual-network--light.svg" alt="Virtual Network" />
+        <div class="smev--features--item--details">
+          <h2>Virtual Engagement. For Everyone. Anywhere.</h2>
+          <p>We embrace the Internet as the primary method of engagement with our members and the entire engineering community.</p>
         </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-6">
-        <a href="{{ .Site.Params.external.youtube_channel_url }}" class="d-flex pb-5 smev-engagement-platform">
-          <div class="pr-4">
-            <img
-              class="smev-engagement-platform__icon"
-              src="{{ .Site.BaseURL }}stream_icon_black.svg"
-              alt="Virtual Events"
-            />
-          </div>
-          <div class="smev-engagement-platform__content">
-            <h3 class="mb-2">Virtual Events</h3>
-            <p class="mb-1 smev-engagement-platform__description">
-              Live-streamed and pre-recorded webinars, workshops and walkthroughs.
-            </p>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-md-6">
-        <a href="{{ .Site.Params.external.discussion_forum_url }}" class="d-flex pb-5 smev-engagement-platform">
-          <div class="pr-4">
-            <img
-              class="smev-engagement-platform__icon"
-              src="{{ .Site.BaseURL }}forum_icon_black.svg"
-              alt="Discussion Forum"
-            />
-          </div>
-          <div class="smev-engagement-platform__content">
-            <h3 class="mb-2">Discussion and Help</h3>
-            <p class="mb-1 smev-engagement-platform__description">
-              Advanced topics, insightful posts, Ask-Me-Anythings, Q&As and announcements - find it all here.
-            </p>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-md-6">
-        <a href="{{ .Site.Params.external.discord_chat_invite_url }}" class="d-flex pb-5 smev-engagement-platform">
-          <div class="pr-4">
-            <img
-              class="smev-engagement-platform__icon"
-              src="{{ .Site.BaseURL }}chat_icon_black.svg"
-              alt="Chat Server"
-            />
-          </div>
-          <div class="smev-engagement-platform__content">
-            <h3 class="mb-2">Chat</h3>
-            <p class="mb-1 smev-engagement-platform__description">
-              Realtime, always-on interaction with community members.
-            </p>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-md-6">
-        <a href="{{ .Site.Params.external.github_org_url }}" class="d-flex pb-5 smev-engagement-platform">
-          <div class="pr-4">
-            <img
-              class="smev-engagement-platform__icon"
-              src="{{ .Site.BaseURL }}code_icon_black.svg"
-              alt="Open Source Work"
-            />
-          </div>
-          <div class="smev-engagement-platform__content">
-            <h3 class="mb-2">Open Source Work</h3>
-            <p class="mb-1 smev-engagement-platform__description">
-              We love open-source. Take a look at our current software/hardware projects. You can get involved too!
-            </p>
-          </div>
-        </a>
-      </div>
+      </article>
+      <article class="smev--features--item">
+        <img src="workshops--light.svg" alt="Workshops" />
+        <div class="smev--features--item--details">
+          <h2>Building the next generation workforce</h2>
+          <p>Manufacturing is moving fast — and evolving. It can be challenging to stay on top of it all. We produce and launch multi-day workshops, snapshot webinars and other online educational events to help.</p>
+          <ul class="smev--links-list">
+            <li>
+              <a href="{{ .Site.Params.external.meetup_group_url }}">Join our Meetup Group</a>
+            </li>
+          </ul>
+        </div>
+      </article>
+      <article class="smev--features--item">
+        <img src="open-source-projects--light.svg" alt="Open Source Projects" />
+        <div class="smev--features--item--details">
+          <h2>Open Source is our DNA</h2>
+          <p>It may surprise you to learn that much of Smart Manufacturing is built on open source software and hardware. We embrace open source completely to provide hands-on educational opportunities and to encourage students and professionals to get engaged with open source.</p>
+          <ul class="smev--links-list">
+            <li>
+              <a href="{{ .Site.Params.external.github_org_url }}">View our GitHub projects</a>
+            </li>
+            <li>
+              <a href="{{ .Site.Params.external.this_url }}">View this website's source code</a>
+            </li>
+          </ul>
+        </div>
+      </article>
+      <article class="smev--features--item">
+        <img src="virtual-tours--light.svg" alt="Virtual Tours" />
+        <div class="smev--features--item--details">
+          <h2>Engagement on your schedule</h2>
+          <p>Your time is at a premium nowadays. Busy work schedules. Traffic. Family life. We understand. All of our events are live-streamed, recorded and instantly available. We also build unique, engaging and immersive web experiences to enrich and educate.</p>
+          <ul class="smev--links-list">
+            <li>
+              <a href="{{ .Site.Params.external.youtube_channel_url }}">Subcribe to our YouTube Channel</a>
+            </li>
+          </ul>
+        </div>
+      </article>
+      <article class="smev--features--item">
+        <img src="conversations--light.svg" alt="Conversations" />
+        <div class="smev--features--item--details">
+          <h2>Conversations that are always on</h2>
+          <p>Need some ideas for a class project? Want to ask the community for technical advice? Have any questions about a workshop? We are listening! Start a conversation today on any of the platforms we support. We welcome the public to participate in the conversations as well.</p>
+          <ul class="smev--links-list">
+            <li>
+              <a href="{{ .Site.Params.external.discord_chat_invite_url }}">Join our Discord Chat Server</a>
+            </li>
+            <li>
+              <a href="{{ .Site.Params.external.discussion_forum_url }}">Join our Subreddit</a>
+            </li>
+          </ul>
+        </div>
+      </article>
+      <article class="smev--features--item">
+        <img src="open-by-design--light.svg" alt="Open By Design" />
+        <div class="smev--features--item--details">
+          <h2>Open By Design</h2>
+          <p>A community is only as good as its ability to listen and adapt to the needs of its members. We welcome your feedback — good or bad. More than that, we strive to make our community entirely transparent in terms of finances, leadership meetings and how we impacting the community.</p>
+          <ul class="smev--links-list">
+            <li>
+              <a href="{{ .Site.Params.external.twitter_url }}">Follow us on Twitter</a>
+            </li>
+          </ul>
+        </div>
+      </article>
     </div>
   </div>
 </section>
 
-<section class="smev-section smev-section-leadership">
-  <div class="pt-5 container">
-    <div class="row">
-      <div class="col">
-        <div class="smev-section__text smev-section-leadership__text">
-          <h2 class="mb-5 smev-section__heading smev-section-leadership__heading">Leadership Team</h2>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
+<section class="smev--leadership">
+  <div class="smev--container smev--py--layout--3">
+    <h1 class="smev--section-header__light smev--pb--layout--3">Leadership Committee</h1>
+    <div class="smev--leadership--grid">
       {{ range $.Site.Params.leaders }}
-      <div class="col-md-6">
-        <div class="d-flex pb-5 smev-leader-profile">
-          <div class="pr-4">
-            <a href="{{ .info_url }}">
-              <img
-                class="smev-photo--profile"
-                src="{{ .Site.BaseURL }}{{ .profile_picture_filename }}"
-                alt="{{ .name }}"
-              />
-            </a>
-          </div>
-          <div class="smev-leader-profile__text-container">
-            <h3 class="mb-2">{{ .name }}</h3>
-            <p class="mb-1 smev-leader-profile__title">{{ .title }}</p>
-            <p class="mb-0 smev-leader-profile__company">
-              <a href="{{ .company_url }}">{{ .company_name }}</a>
-            </p>
-          </div>
+      <article class="smev--leadership--item">
+        <img src="{{ .profile_picture_filename }}" alt="{{ .name }}" />
+        <div class="smev--leadership--item--details">
+          <h2><a href="{{ .info_url }}">{{ .name }}</a></h2>
+          <p><strong>{{ .title }}</strong></p>
+          <p>{{ .company }}</p>
         </div>
-      </div>
+      </article>
       {{ end }}
     </div>
   </div>
