@@ -1,8 +1,6 @@
 <!doctype html>
 <html lang="{{ .Site.LanguageCode | default "en" }}">
   <head>
-    {{ partial "site/google-analytics.html" . }}
-
     {{ block "meta" . }}{{ partial "site/meta.html" . }}{{ end }}
 
     <title>{{ block "title" . }}{{- with .Title }}{{ . }} | {{ end }}{{ .Site.Title -}}{{ end }}</title>
@@ -19,7 +17,6 @@
     {{ block "header" . }}{{ partial "site/header.html" . }}{{ end }}
 
     <main>
-      {{ block "news-ticker" . }}{{ partial "site/news-ticker.html" . }}{{ end }}
       {{ block "main" . }}{{ end }}
     </main>
 
