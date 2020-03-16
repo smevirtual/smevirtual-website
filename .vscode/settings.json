@@ -9,5 +9,7 @@
   },
   "eslint.packageManager": "yarn",
   "html.format.enable": false,
-  "eslint.autoFixOnSave": true
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
 }
