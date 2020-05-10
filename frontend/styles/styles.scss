@@ -316,8 +316,7 @@ a {
   }
 }
 
-.smev--features--item--details,
-.smev--leadership--item--details {
+.smev--features--item--details {
   @extend .smev--pl--layout--3;
 }
 
@@ -325,7 +324,7 @@ a {
   @extend .smev--bg--white;
   @extend .smev--pt--layout--3;
   display: grid;
-  grid-template-columns: 11rem 1fr;
+  grid-template-columns: 1fr;
   grid-template-rows: auto;
 
   & img {
@@ -370,4 +369,42 @@ a {
     @extend .smev--no-underline;
     outline: none;
   }
+}
+
+.smev--button__big:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}
+
+.smev--button__big {
+  @extend .smev--text--white;
+  background-color: #0f62fe;
+  display: inline-block;
+  font-weight: 400;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid #fff;
+  padding: 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0;
+
+  &:active,
+  &:focus,
+  &:hover {
+    @extend .smev--text--white;
+    @extend .smev--no-underline;
+    background-color: #0353e9;
+    outline: none;
+  }
+
+  p {
+    padding-top: 0.5rem;
+  }
+}
+
+.smev--button-header {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.625rem;
 }
